@@ -1,7 +1,7 @@
-fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal')
+fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=1')
     .then(r => r.json())
     .then(({teams}) => {
-        console.log(teams[0])
+        console.log(teams)
         document.getElementById('teamPhoto').innerHTML = `
             <img src="${teams[0].strTeamBadge}">
         `
