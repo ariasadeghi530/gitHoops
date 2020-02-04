@@ -9,25 +9,25 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/style.css" type="text/css" media="screen,projection"/>
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="screen,projection" />
 </head>
 
 <body>
-  <!-- Navbar/***Need to fix Search Bar -->
+
+  <!-- Navbar -->
   <div class="navbar-fixed">
     <nav class="blue-grey darken-2">
       <div class="container">
         <div class="nav-wrapper">
           <a href="index.html" class="brand-logo">GitSports</a>
           <ul id="nav-mobile" class="right">
-            <li><i class="material-icons">search</i></li>
             <li>
-              <form>
-                <div class="input-field">
-                  <input id="text" type="text" required>
-                  <label class="label-icon whtie-text" for="text"></label>
-                </div>
-              </form>
+              <div class="input-field">
+                <input type="text" id="searchBar">
+                <label class="label-icon whtie-text" for="text"></label>
+              </div>
+            <li><a class="btn-floating btn waves-effect waves-light blue-grey darken-2" id="searchBtn"><i
+                  class="material-icons">search</i></a></li>
             </li>
             <li><a href="#">Games</a></li>
             <li><a href="team.html">Teams</a></li>
@@ -36,39 +36,41 @@
         </div>
         </ul>
       </div>
-      </div>
-    </nav>
+  </div>
+  </nav>
   </div>
 
   <div class="container">
-      <div class="row">
-        <div class="col s12 m4">
-            <div id="teamPhoto" class="center"></div>
-            <h5 class="center" id="teamName"></h5>
-            <ul class="center">
-                <li id="sport" class="left"></li>
-                <li id="league" class="left"></li>
-                <li id="stadium" class="left"></li>
-                <li id="website" class="left"></li>
-            </ul>
-            
-        </div><!--col m5-->
+    <div class="row">
+      <div class="col s12 m4">
+        <div id="teamPhoto" class="center"></div>
+        <h5 class="center" id="teamName"></h5>
+        <ul class="center">
+          <li id="sport" class="left"></li>
+          <li id="league" class="left"></li>
+          <li id="stadium" class="left"></li>
+          <li id="website" class="left"></li>
+        </ul>
 
-        <div class="col s12 m8">
-            <h2 class="center black-text"><i>Bio</i></h2>
-          <p id="bio"></p>
-        </div><!-- col m5-->
-      </div><!--row-->
-      
+      </div>
+      <!--col m5-->
+
+      <div class="col s12 m8">
+        <h2 class="center black-text"><i>Bio</i></h2>
+        <p id="bio"></p>
+      </div><!-- col m5-->
+    </div>
+    <!--row-->
+
 
     <!-- Footer -->
     <footer class="page-footer blue-grey darken-2">
       <div class="container">
         <div class="row">
           <div class="col s12 center">
-            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>  
-    <!-- Logo Image need to add 's' to end of 'Sport' -->
-            <img src="./assets/gitSportsLogo.png" alt="logo">
+            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>
+            <!-- Logo Image need to add 's' to end of 'Sport' -->
+            <img src="./assets/images/updateLogo.png" alt="logo">
           </div>
         </div>
       </div>
@@ -79,8 +81,8 @@
       </div>
     </footer>
 
-    
-    <script src="./assets/js/script.js"></script>
+
+    <script src="./assets/js/team.js"></script>
 </body>
 
 </html>
