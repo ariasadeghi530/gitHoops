@@ -13,31 +13,30 @@
 </head>
 
 <body>
-  <!-- Navbar/***Need to fix Search Bar -->
+  <!-- Navbar -->
   <div class="navbar-fixed">
     <nav class="blue-grey darken-2">
       <div class="container">
         <div class="nav-wrapper">
           <a href="#home" class="brand-logo">GitSports</a>
-          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">search</i>
-            <input type="text" name="Search" class="header-search-input z-depth-5" placeholder="Search"/>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" class="right">
             <li>
-              <div class="header-search-wrapper">
-                <i class="material-icons">search</i>
-                <input type="text" name="Search" class="header-search-input z-depth-5" placeholder="Search"/>
-              </div>
+                <div class="input-field">
+                  <input type="text" id="searchBar">
+                  <label class="label-icon whtie-text" for="text"></label>
+                </div>
+              <li><a class="btn-floating btn waves-effect waves-light blue-grey darken-2" id="searchBtn"><i class="material-icons">search</i></a></li>
             </li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Game</a></li>
-            <li><a href="#">Player</a></li>
-          </ul>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Players</a></li>
         </div>
+        </ul>
+      </div>
       </div>
     </nav>
   </div>
+  
 
   <!-- Top Section/***Need to fix img src -->
   <div class="parallax-container parallax-header">
@@ -91,9 +90,9 @@
       <div class="container">
         <div class="row">
           <div class="col s12 center">
-            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>  
-    <!-- Logo Image need to add 's' to end of 'Sport' -->
-            <img src="./assets/gitSportsLogo.png" alt="logo">
+            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>
+            <!-- Logo Image need to add 's' to end of 'Sport' -->
+            <img src="./assets/images/updateLogo.png" alt="logo">
           </div>
         </div>
       </div>
@@ -104,8 +103,8 @@
       </div>
     </footer>
 
-
-    <script src="./assets/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
