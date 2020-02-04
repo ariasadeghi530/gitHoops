@@ -22,9 +22,11 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal')
         `
         document.getElementById('bio').innerHTML = `
         ${teams[0].strDescriptionEN}
-        `
+        `        
     })
     .catch(e => console.log(e))
+
+    
 
 // document.getElementById('playerPhoto').innerHTML = 
 
