@@ -1,0 +1,72 @@
+nav ul a, nav .brand-logo {
+  color: white;
+}
+
+img {
+  width: 120px;
+}
+
+.parallax-container {
+  min-height: 200px;
+  line-height: 0;
+  height: auto;
+}
+
+.parallax-header {
+  min-height: 320px;
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .parallax-container .section {
+    top: 0;
+  }
+}
+
+.input-field [type=text] {
+  color: white;
+}
+
+
+
+.input-field input[type=text]:focus+label, .materialize-textarea:focus:not([readonly])+label {
+  color: #b71c1c !important;
+}
+
+.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #b71c1c !important;
+  box-shadow: 0 1px 0 0 #b71c1c !important;
+}
