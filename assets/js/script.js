@@ -1,30 +1,32 @@
-fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal')
-    .then(r => r.json())
-    .then(({teams}) => {
-        console.log(teams[0])
-        document.getElementById('teamPhoto').innerHTML = `
-            <img src="${teams[0].strTeamBadge}">
-        `
-        document.getElementById('teamName').innerHTML = `
-            ${teams[0].strTeam}
-        `
-        document.getElementById('sport').innerHTML = `
-        <strong>Sport: </strong>${teams[0].strSport}
-        `
-        document.getElementById('league').innerHTML = `
-        <strong>League: </strong>${teams[0].strLeague}
-        `
-        document.getElementById('stadium').innerHTML = `
-        <strong>Stadium: </strong>${teams[0].strStadium} (${teams[0].strStadiumLocation})
-        `
-        document.getElementById('website').innerHTML = `
-        <strong>Website: </strong>${teams[0].strWebsite}
-        `
-        document.getElementById('bio').innerHTML = `
-        ${teams[0].strDescriptionEN}
-        `        
-    })
-    .catch(e => console.log(e))
+
+
+// fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=')
+//     .then(r => r.json())
+//     .then(({teams}) => {
+//         console.log(teams[0])
+//         document.getElementById('teamPhoto').innerHTML = `
+//             <img src="${teams[0].strTeamBadge}">
+//         `
+//         document.getElementById('teamName').innerHTML = `
+//             ${teams[0].strTeam}
+//         `
+//         document.getElementById('sport').innerHTML = `
+//         <strong>Sport: </strong>${teams[0].strSport}
+//         `
+//         document.getElementById('league').innerHTML = `
+//         <strong>League: </strong>${teams[0].strLeague}
+//         `
+//         document.getElementById('stadium').innerHTML = `
+//         <strong>Stadium: </strong>${teams[0].strStadium} (${teams[0].strStadiumLocation})
+//         `
+//         document.getElementById('website').innerHTML = `
+//         <strong>Website: </strong>${teams[0].strWebsite}
+//         `
+//         document.getElementById('bio').innerHTML = `
+//         ${teams[0].strDescriptionEN}
+//         `        
+//     })
+//     .catch(e => console.log(e))
 
     
 
@@ -59,6 +61,8 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal')
 //         document.getElementById('title').value = ''
 //         })
 //         .catch(e => console.error(e))
+
+
 //array containing names of all the teams
 let nbaTeamNames = [];
 
@@ -73,28 +77,23 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=NBA')
 })
 .catch(e => console.error(e));
 
+let searchVal = localStorage.getItem('search') || '';
 
 document.getElementById('searchBtn').addEventListener("click", event => {
-let searchVal = document.getElementById("searchBar").value.toLowerCase();
+searchVal = document.getElementById("searchBar").value.toLowerCase();
+localStorage.setItem('search', searchVal);
+
 if(!(nbaTeamNames.includes(searchVal))) {
   //split name for ajax request
   let splitName = searchVal.split(" ");
   console.log(splitName);
   searchPlayer(splitName[0], splitName[1]);
 } else {
-  searchTeam(searchVal);
+  window.location.replace('./team.html');
 }
 document.getElementById('searchBar').value = '';
 })
 
-function searchTeam(str){
-  fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=' + str)
-    .then(r => r.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch(e => console.error(e));
-}
 
 function searchPlayer(strFirst, strLast){
   fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=' + strFirst + '%20' + strLast)
