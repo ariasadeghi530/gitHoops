@@ -18,7 +18,7 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal')
         <strong>Stadium: </strong>${teams[0].strStadium} (${teams[0].strStadiumLocation})
         `
         document.getElementById('website').innerHTML = `
-        <strong>Website: </strong>${teams[0].strWebsite}
+        <strong>Website: </strong><a target="_blank" href="https://${teams[0].strWebsite}">${teams[0].strWebsite}</a>
         `
         document.getElementById('bio').innerHTML = `
         ${teams[0].strDescriptionEN}
@@ -26,39 +26,9 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal')
     })
     .catch(e => console.log(e))
 
-    
 
 // document.getElementById('playerPhoto').innerHTML = 
 
-
-// fetch(`http://www.omdbapi.com/?t=${document.getElementById('title').value}&apikey=trilogy`)
-//         .then(r => r.json())
-//         .then(({ Title, Year, Director, Poster, Plot }) => {
-//           movie = {
-//             title: Title,
-//             year: Year,
-//             director: Director,
-//             plot: Plot
-//           }
-//           document.getElementById('movie').innerHTML = `
-//           <div class="card">
-//             <div class="card-image">
-//               <img src="${Poster}" alt="${Title}">
-//               <span class="card-title">${Title}</span>
-//             </div>
-//             <div class="card-content">
-//               <h4>Directed by ${Director}</h4>
-//               <h5>Year: ${Year}</h5>
-//               <p>${Plot}</p>
-//             </div>
-//             <div class="card-action">
-//               <button class="btn waves-effect waves-light addWatchlist">Add To Watchlist</button>
-//             </div>
-//           </div>
-//         `
-//         document.getElementById('title').value = ''
-//         })
-//         .catch(e => console.error(e))
 //array containing names of all the teams
 let nbaTeamNames = [];
 
