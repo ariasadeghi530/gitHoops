@@ -51,70 +51,70 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
             ${teams[7].strTeam}
         `
         document.getElementById('teamPhoto9').innerHTML = `
-            <a target="_blank" href="./team.html"><img src="${teams[8].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[8].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto10').innerHTML = `
-            <a target="_blank" href="./team.html"><img src="${teams[9].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[9].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto11').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[10].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[10].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto12').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[11].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[11].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto13').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[12].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[12].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto14').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[13].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[13].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto15').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[14].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[14].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto16').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[15].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[15].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto17').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[16].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[16].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto18').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[17].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[17].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto19').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[18].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[18].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto20').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[19].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[19].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto21').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[20].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[20].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto22').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[21].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[21].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto23').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[22].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[22].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto24').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[23].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[23].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto25').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[24].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[24].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto26').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[25].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[25].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto27').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[26].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[26].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto28').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[27].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[27].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto29').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[28].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[28].strTeamBadge}"></a>
         `
         document.getElementById('teamPhoto30').innerHTML = `
-            <<a target="_blank" href="./team.html"><img src="${teams[29].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[29].strTeamBadge}"></a>
         `
         document.getElementById('teamName9').innerHTML = `
             ${teams[8].strTeam}
