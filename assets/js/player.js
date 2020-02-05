@@ -20,6 +20,9 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=los%20angel
         document.getElementById('weight').innerHTML = `
             <strong>Weight: </strong>${player[0].strWeight}
         `
+        document.getElementById('playerName').innerHTML = `
+            <h2>${player[0].strPlayer}<h2>
+        `
         document.getElementById('bio').innerHTML = `
             ${player[0].strDescriptionEN}
         `
