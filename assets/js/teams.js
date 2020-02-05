@@ -1,4 +1,4 @@
-fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=1')
+fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
     .then(r => r.json())
     .then(({teams}) => {
         console.log(teams)
@@ -182,5 +182,4 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=1')
         document.getElementById('teamName30').innerHTML = `
             ${teams[29].strTeam}
         `
-
     })
