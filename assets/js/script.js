@@ -43,10 +43,4 @@ function searchPlayer(strFirst, strLast){
     .catch(e => console.error(e));
 }
 
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 33.6846, lng: -117.8265 },
-    zoom: 8
-  });
-}
+

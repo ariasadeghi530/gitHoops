@@ -51,6 +51,17 @@
           <li id="stadium" class="left"></li>
           <li id="website" class="left"></li>
         </ul>
+        
+        // map find by ip name 
+        <div id="" style="display: none">
+          <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+        </div>
+        <div id="map"></div>
+        <div id="infowindow-content">
+          <span id="place-name" class="title"></span><br>
+          <strong>Place ID:</strong> <span id="place-id"></span><br>
+          <span id="place-address"></span>
+        </div>
 
       </div>
       <!--col m5-->
@@ -80,8 +91,9 @@
         </div>
       </div>
     </footer>
-
-
+    // api googlemap key
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbOrVjet_s1nbRMEgLVNsx0reP9G6Ju6g&libraries=places&callback=initMap" async
+      defer></script>
     <script src="./assets/js/team.js"></script>
 </body>
 
