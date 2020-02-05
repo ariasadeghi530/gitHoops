@@ -8,7 +8,7 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=NBA')
         teams.forEach((element) => {
             nbaTeamNames.push(element.strTeam.toLowerCase());
             let teamNameArr = element.strTeam.split(" ");
-            console.log(teamNameArr);
+           
             if (teamNameArr.length > 2) {
 
                 nbaTeamNames.push(teamNameArr[teamNameArr.length - 1].toLowerCase())
@@ -17,7 +17,7 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=NBA')
             }
 
         });
-        console.log(nbaTeamNames)
+       
 
     })
     .catch(e => console.error(e));
@@ -53,7 +53,7 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
     .then(({teams}) => {
         for (let i = 0; i < teams.length; i++){
         document.getElementById(`teamPhoto${i+1}`).innerHTML = `
-            <a href="./team.html"><img src="${teams[i].strTeamBadge}"></a>
+            <a href="./team.html"><img src="${teams[i].strTeamBadge}" id="${teams[i].strTeam}"></a>
         `
         document.getElementById(`teamName${i+1}`).innerHTML = `
             ${teams[i].strTeam}
@@ -61,6 +61,7 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
         }
     })
 
+//clicking on team image redirects to team page
 document.addEventListener('click', event => {
-    
+    localStorage.setItem('search', event.target.id);
 })
