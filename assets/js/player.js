@@ -36,7 +36,7 @@ function searchPlayer(strFirst, strLast) {
 fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=los%20angeles%20lakers')
     .then(r => r.json())
     .then(({player}) => {
-        //console.log(player)
+        console.log(player)
         
     })
 
