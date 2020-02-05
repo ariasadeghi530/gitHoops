@@ -22,9 +22,9 @@ document.getElementById('searchBtn').addEventListener("click", event => {
   localStorage.setItem('search', searchVal);
 
   if (!(nbaTeamNames.includes(searchVal))) {
-    let splitName = searchVal.split(" ");
-    localStorage.setItem('name', splitName);
-    searchPlayer(splitName[0], splitName[1]);
+    // let splitName = searchVal.split(" ");
+    // localStorage.setItem('player', splitName);
+   
     window.location.replace('./player.html');
   } else {
     searchTeam(searchVal);

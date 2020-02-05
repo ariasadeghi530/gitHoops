@@ -77,9 +77,9 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 
     if (!(nbaTeamNames.includes(searchVal))) {
         //split name for ajax request
-        let splitName = searchVal.split(" ");
-        console.log(splitName);
-        searchPlayer(splitName[0], splitName[1]);
+        
+        // localStorage.setItem('player', splitName);
+        window.location.replace('./player.html')
     } else {
         window.location.replace('./team.html');
     }
