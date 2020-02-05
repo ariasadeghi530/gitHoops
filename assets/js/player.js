@@ -6,10 +6,19 @@ let nbaTeamNames = [];
 fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=NBA')
   .then(r => r.json())
   .then(({ teams }) => {
-    teams.forEach((element, index) => {
-      nbaTeamNames[index] = element.strTeam.toLowerCase();
-    });
+    teams.forEach((element) => {
+      nbaTeamNames.push(element.strTeam.toLowerCase());
+      let teamNameArr = element.strTeam.split(" ");
+      console.log(teamNameArr);
+      if (teamNameArr.length > 2) {
 
+        nbaTeamNames.push(teamNameArr[teamNameArr.length - 1].toLowerCase())
+      } else {
+        nbaTeamNames.push(teamNameArr[teamNameArr.length - 1].toLowerCase())
+      }
+
+    });
+    console.log(nbaTeamNames)
   })
   .catch(e => console.error(e));
 
@@ -25,6 +34,11 @@ document.getElementById('searchBtn').addEventListener("click", event => {
     let splitName = searchVal.split(" ");
     searchPlayer(splitName[0], splitName[1]);
   } else {
+    // if team name doesn't include city, go back to previous index with city
+    if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
+      searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)]
+      localStorage.setItem('search', searchVal);
+    }
     window.location.replace('./team.html');
   }
   document.getElementById('searchBar').value = '';
@@ -37,7 +51,7 @@ function searchPlayer(strFirst, strLast) {
     .then((data) => {
       console.log(data)
       // EVAN: ADD JS HERE
-      
+
     })
     .catch(e => console.error(e));
 }
