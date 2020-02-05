@@ -51,10 +51,7 @@ function searchTeam(str) {
         <strong>League: </strong>${teams[0].strLeague}
         `
       document.getElementById('website').innerHTML = `
-        <strong>Website: </strong>${teams[0].strWebsite}
-        `
-      document.getElementById('stadium').innerHTML = `
-        <strong>Stadium: </strong>${teams[0].strStadium}(${teams[0].strStadiumLocation})
+        <strong>Website: </strong><a target="_blank" href="https://${teams[0].strWebsite}">${teams[0].strWebsite}</a>
         `
       document.getElementById('stadium').innerHTML = `
         <strong>Stadium: </strong>${teams[0].strStadium}(${teams[0].strStadiumLocation})
