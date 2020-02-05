@@ -50,11 +50,14 @@ function searchTeam(str) {
       document.getElementById('league').innerHTML = `
         <strong>League: </strong>${teams[0].strLeague}
         `
+      document.getElementById('website').innerHTML = `
+        <strong>Website: </strong>${teams[0].strWebsite}
+        `
       document.getElementById('stadium').innerHTML = `
         <strong>Stadium: </strong>${teams[0].strStadium}(${teams[0].strStadiumLocation})
         `
-      document.getElementById('website').innerHTML = `
-        <strong>Website: </strong>${teams[0].strWebsite}
+      document.getElementById('stadium').innerHTML = `
+        <strong>Stadium: </strong>${teams[0].strStadium}(${teams[0].strStadiumLocation})
         `
       document.getElementById('bio').innerHTML = `
         ${teams[0].strDescriptionEN}
