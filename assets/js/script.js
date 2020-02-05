@@ -16,6 +16,8 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=NBA')
 })
 .catch(e => console.error(e));
 
+
+//search bar redirect
 let searchVal = localStorage.getItem('search') || '';
 
 document.getElementById('searchBtn').addEventListener("click", event => {
