@@ -56,9 +56,6 @@ footer.page-footer {
   }
 }
 
-.row {
-  margin-top: 100px;
-}
 
 /* search styling */
 input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+label {
@@ -89,4 +86,9 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 
 .input-field [type=text] {
   color: white;
+}
+
+/* margin for page elements */
+.row {
+  margin-top: 50px;
 }
