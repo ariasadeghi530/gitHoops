@@ -1,7 +1,3 @@
-
-
-
-
 //array containing names of all the teams
 let nbaTeamNames = [];
 
