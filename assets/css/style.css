@@ -92,3 +92,8 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 .row {
   margin-top: 50px;
 }
+
+/* .card-image {
+  height: 384px;
+  width: 283px;
+} */
