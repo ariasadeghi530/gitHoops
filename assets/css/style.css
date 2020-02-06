@@ -94,7 +94,6 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   margin-top: 50px;
 }
 
-
 .gameImage {
   height: 220px;
 }
@@ -110,4 +109,11 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 
 #teamBio {
   margin-top: 0;
+}
+
+#map {
+  height: 300px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
