@@ -22,7 +22,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
             searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)];
             localStorage.setItem('search', searchVal);
         }
-        window.location.replace('./team.html');
+        // window.location.replace('./team.html');
     }
     document.getElementById('searchBar').value = '';
 })
@@ -30,6 +30,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 //list all the teams badges on page
 fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
     .then(r => r.json())
+    // .then(res => console.log(res))
     .then(({ teams }) => {
         for (let i = 0; i < teams.length; i++) {
             document.getElementById(`teamPhoto${i + 1}`).innerHTML = `
