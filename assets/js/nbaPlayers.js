@@ -1,18 +1,18 @@
-let currentPlayers = [];
+let currentPlayers = JSON.parse(localStorage.getItem('players')) || [];
 
-console.log(nbaTeamNames[8]);
+let nbaTeams = JSON.parse(localStorage.getItem('nbaTeams'));
+
 
 // ajax request to populate players array
-for (let i = 0; i < nbaTeamNames.length; i += 2) {
-  let teamName = nbaTeamNames[i].split(" ").join("%20");
-  console.log(teamName);
+for (let k = 0; k < nbaTeams.length; k += 2) {
+  let teamName = nbaTeams[k].split(' ').join('%20');
+  
 fetch(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${teamName}`)
   .then(r => r.json())
   .then(({player}) => {
     for(let j = 0; j < player.length; j++){
       currentPlayers.push(player[j].strPlayer);
     }
-    
+    localStorage.setItem('players', JSON.stringify(currentPlayers));
   })
 }
-console.log(currentPlayers);
