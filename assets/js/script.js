@@ -6,15 +6,15 @@ let searchVal = localStorage.getItem('search') || '';
 
 //search bar redirect
 document.getElementById('searchBtn').addEventListener("click", event => {
-  
+
 searchVal = document.getElementById("searchBar").value.toLowerCase();
 localStorage.setItem('search', searchVal);
 
-if(!(nbaTeamNames.includes(searchVal))) {
+  if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
   //split name for ajax request
-  // let splitName = searchVal.split(" ");
+  let splitName = searchVal.split(" ");
   
-  // localStorage.setItem('player', splitName);
+  localStorage.setItem('player', splitName);
   
   window.location.replace('./player.html')
 } else {

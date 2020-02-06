@@ -8,10 +8,10 @@ document.getElementById('searchBtn').addEventListener("click", event => {
     searchVal = document.getElementById("searchBar").value.toLowerCase();
     localStorage.setItem('search', searchVal);
 
-    if (!(nbaTeamNames.includes(searchVal))) {
+    if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
         //split name for ajax request
-        
-        // localStorage.setItem('player', splitName);
+        let splitName = searchVal.split(" ");
+        localStorage.setItem('player', splitName);
         window.location.replace('./player.html')
     } else {
         // if team name doesn't include city, go back to previous index with city
