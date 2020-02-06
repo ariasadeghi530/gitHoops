@@ -5,7 +5,6 @@ let searchVal = localStorage.getItem('search') || '';
 let latit = JSON.parse(localStorage.getItem('lat'));
 let long = JSON.parse(localStorage.getItem('lon'));
 
-let map, marker, stadium;
 
 
 document.getElementById('searchBtn').addEventListener("click", event => {
@@ -69,12 +68,12 @@ function searchTeam(str) {
           console.log(long)
           localStorage.setItem('lon', long)
 
-          stadium = { lat: latit, lng: long };
-          map = new google.maps.Map(
+          let stadium = { lat: latit, lng: long };
+          let map = new google.maps.Map(
             document.getElementById('map'), { zoom: 16, center: stadium });
 
           // The marker, positioned at stadium
-          marker = new google.maps.Marker({ position: stadium, map });
+         let marker = new google.maps.Marker({ position: stadium, map });
 
         })
         .catch(e => console.error(e))
