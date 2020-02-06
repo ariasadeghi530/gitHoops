@@ -69,7 +69,7 @@ fetch(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${search}`)
   document.getElementById('player0').innerHTML = `
       <div class="card blue-grey darken-1 center white-text">
         <div class="card-image">
-          <img src="${player[0].strThumb}">
+          <a href="#" id="${player[0].strPlayer}"><img src="${player[0].strThumb}"></a>
         </div><!--card-image-->
           <span class="card-title">${player[0].strPlayer}</span>
       </div><!--card blue-grey darken-1 center white-text-->
@@ -186,4 +186,11 @@ fetch(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${search}`)
           <span class="card-title">${player[14].strPlayer}</span>
       </div><!--card blue-grey darken-1 center white-text-->
   `
+})
+
+
+//event listener
+document.getElementById('playerContainer').addEventListener('click', event => {
+  console.log(event.target.id);
+  localStorage.setItem('search', (event.target.id).toLowerCase())
 })
