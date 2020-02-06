@@ -22,7 +22,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
             searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)];
             localStorage.setItem('search', searchVal);
         }
-        // window.location.replace('./team.html');
+        window.location.replace('./team.html');
     }
     document.getElementById('searchBar').value = '';
 })

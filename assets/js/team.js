@@ -2,8 +2,8 @@ const apiKey = 'AIzaSyCbOrVjet_s1nbRMEgLVNsx0reP9G6Ju6g';
 
 let searchVal = localStorage.getItem('search') || '';
 
-let latit = JSON.parse(localStorage.getItem('lat')) || 33.6846;
-let long = JSON.parse(localStorage.getItem('lon')) || 117.8265;
+let latit = JSON.parse(localStorage.getItem('lat'));
+let long = JSON.parse(localStorage.getItem('lon'));
 
 let map, marker, stadium;
 
@@ -85,7 +85,6 @@ function searchTeam(str) {
 function initMap() {
 
   // The location of stadium
-
 
 }
 
