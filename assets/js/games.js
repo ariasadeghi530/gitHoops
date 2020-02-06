@@ -30,7 +30,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
   .then(r => r.json())
   .then(({ events }) => {
-    console.log(events)
+    
     document.getElementById('games').innerHTML = '';
     for (let i = 0; i < events.length; i++) {
       let imgBanner = events[i].strThumb;
