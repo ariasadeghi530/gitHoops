@@ -34,8 +34,11 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
     document.getElementById('games').innerHTML = '';
     for (let i = 0; i < events.length; i++) {
       let imgBanner = events[i].strThumb;
-
+      let localTime = events[i].strTimeLocal;
       let gameDiv = document.createElement('div');
+      if (localTime ===  null || "") {
+        localTime = " ";
+      }
       if (imgBanner === null) {
         imgBanner = './assets/images/nbaLogo.png';
       }
@@ -43,10 +46,10 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
       <div class="col s12 m4">
         <div class="card">
           <div class="card-image">
-            <img class="gameImage" src="${imgBanner}">
-            <span class="card-title">${events[i].dateEventLocal}</span>
-          </div><!--card image-->
-          <div class="card-content">
+          <img class="gameImage" src="${imgBanner}">
+          <span class="card-title timeZone">${localTime}</span>
+            </div><!--card image-->
+            <div class="card-content">
             <p>${events[i].strEventAlternate}</p>
           </div><!--card content-->
         </div><!--card-->

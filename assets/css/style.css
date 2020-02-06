@@ -104,3 +104,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   height: 254px;
 }
 
+.timeZone {
+  font-size: 18px !important;
+}
+
