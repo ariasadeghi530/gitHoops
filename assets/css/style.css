@@ -2,6 +2,17 @@ nav ul a, nav .brand-logo {
   color: white;
 }
 
+#navbarLogo {
+  height: 60px;
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .navbar-material .container .nav-wrapper .brand-logo  img {
+    height: 56px;
+  }
+}
+
 img {
   width: 120px;
 }
@@ -56,7 +67,6 @@ footer.page-footer {
   }
 }
 
-
 /* search styling */
 
 input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+label {
@@ -98,6 +108,7 @@ html, body {
 }
 
 /* margin for page elements */
+
 .row {
   margin-top: 50px;
 }
