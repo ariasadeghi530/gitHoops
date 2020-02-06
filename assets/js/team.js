@@ -1,27 +1,4 @@
 
-let nbaTeamNames = [];
-
-
-//populate array with all team names
-fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=NBA')
-  .then(r => r.json())
-  .then(({ teams }) => {
-    teams.forEach((element) => {
-      nbaTeamNames.push(element.strTeam.toLowerCase());
-      let teamNameArr = element.strTeam.split(" ");
-      
-      if (teamNameArr.length > 2) {
-
-        nbaTeamNames.push(teamNameArr[teamNameArr.length - 1].toLowerCase())
-      } else {
-        nbaTeamNames.push(teamNameArr[teamNameArr.length - 1].toLowerCase())
-      }
-
-    });
-    
-  })
-  .catch(e => console.error(e));
-
 
 let searchVal = localStorage.getItem('search') || '';
 
@@ -54,7 +31,7 @@ function searchTeam(str) {
   fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=' + str)
     .then(r => r.json())
     .then(({ teams }) => {
-      console.log(teams)
+      
       document.getElementById('teamPhoto').innerHTML = `
             <img src="${teams[0].strTeamBadge}">
         `
@@ -79,6 +56,15 @@ function searchTeam(str) {
     })
     .catch(e => console.error(e));
 }
+
+fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=los%20angeles%20lakers')
+  .then(r => r.json())
+  .then(({player}) => {
+    for(let i = 0; i < player.length; i++){
+     
+    }
+  })
+
 
 let search = localStorage.getItem('search')
 searchTeam(search);
