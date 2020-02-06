@@ -56,9 +56,6 @@ footer.page-footer {
   }
 }
 
-.row {
-  margin-top: 100px;
-}
 
 /* search styling */
 
@@ -98,6 +95,11 @@ html, body {
 
 .input-field [type=text] {
   color: white;
+}
+
+/* margin for page elements */
+.row {
+  margin-top: 50px;
 }
 
 /* map */

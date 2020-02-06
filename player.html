@@ -9,7 +9,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/style.css" type="text/css" media="screen,projection"/>
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="screen,projection"/>
 </head>
 
 <body>
@@ -40,35 +40,27 @@
   </div>
   
   <div class="container">
-      <div class="row">
-        <div class="col s12 m4">
-            <div id="playerPhoto"></div>
-            <h5 class="center">Insert player name js</h5>
-            <ul>
-                <li>Team: insert js here</li>
-                <li>Age: insert js here</li>
-                <li>Hometown: insert js here</li>
-                <li>Height: insert js here</li>
-                <li>Weight: insert js here</li>
-            </ul>
-            
-        </div><!--col m5-->
+    <div class="row">
+      <div class="col s12 m4">
+        <div id="playerPhoto" class="center"></div>
+        <h5 class="center" id="playerName"></h5>
+        <ul class="center">
+          <li id="team"></li>
+          <li id="age"></li>
+          <li id="hometown"></li>
+          <li id="height"></li>
+          <li id="weight"></li>
+        </ul>
 
-        <div class="col s12 m8">
-          <div class="icon-block">
-            <h2 class="center black-text"><i>Bio</i></h2>
+      </div>
+      <!--col m5-->
 
-            <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. </p>
-                <p>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla minima atque minus? Esse, odit dicta autem eius omnis, voluptatibus, qui veniam quam nostrum debitis sapiente quo quisquam possimus necessitatibus. In!
-                </p>
-          </div>
-        </div><!-- col m5-->
-      </div><!--row-->
-      
-
+      <div class="col s12 m8">
+        <h2 class="center black-text"><i>Bio</i></h2>
+        <p id="bio"></p>
+      </div><!-- col m5-->
+    </div>
+    <!--row-->
     <!-- Footer -->
     <footer class="page-footer blue-grey darken-2">
       <div class="container">
@@ -76,19 +68,19 @@
           <div class="col s12 center">
             <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>  
     <!-- Logo Image need to add 's' to end of 'Sport' -->
-            <img src="./assets/images/updateLogo.png" alt="logo">
+          <img src="./assets/images/updateLogo.png" alt="logo">
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">&copy; Copyright | by Aria, Evan, Mel, Nok (alphabetical order)
+        <div class="container">&copy; Copyright | by Aria, Evan, Mel, and Nok
           <a class="black-text text-lighten-4 right" href="#">Credits</a>
         </div>
       </div>
     </footer>
-
-    
-    <script src="assets/js/test.js"></script>
+    <script src="./assets/js/nbaTeams.js"></script>
+    <script src="./assets/js/nbaPlayers.js"></script>
+    <script src="./assets/js/player.js"></script>
 </body>
 
 </html>
