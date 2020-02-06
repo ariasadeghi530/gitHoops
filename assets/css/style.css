@@ -113,7 +113,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 
 #map {
   height: 300px;
-  /* The height is 400 pixels */
+  
   width: 100%;
-  /* The width is the width of the web page */
+  
 }
