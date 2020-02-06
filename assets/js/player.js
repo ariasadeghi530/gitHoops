@@ -7,12 +7,15 @@ document.getElementById('searchBtn').addEventListener("click", event => {
   searchVal = document.getElementById("searchBar").value.toLowerCase();
   localStorage.setItem('search', searchVal);
 
-  console.log(currentPlayers)
+  
   if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
+
     //split name for ajax request
     let splitName = searchVal.split(" ");
     searchPlayer(splitName[0], splitName[1]);
+
   } else {
+
     // if team name doesn't include city, go back to previous index with city
     if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
       searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)]
@@ -53,7 +56,10 @@ function searchPlayer(strFirst, strLast) {
       document.getElementById('bio').innerHTML = `
             ${player[0].strDescriptionEN}
         `
-
     })
     .catch(e => console.error(e));
-}
+  }
+
+
+let search = (localStorage.getItem('search')).split(" ");
+searchPlayer(search[0], search[1]);
