@@ -10,6 +10,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 
   if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
     let splitName = searchVal.split(" ");
+
     localStorage.setItem('player', splitName);
    
     window.location.replace('./player.html');
@@ -57,13 +58,6 @@ function searchTeam(str) {
     .catch(e => console.error(e));
 }
 
-fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=los%20angeles%20lakers')
-  .then(r => r.json())
-  .then(({player}) => {
-    for(let i = 0; i < player.length; i++){
-     
-    }
-  })
 
 
 let search = localStorage.getItem('search')
