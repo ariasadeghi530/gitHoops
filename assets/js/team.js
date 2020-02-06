@@ -32,7 +32,6 @@ function searchTeam(str) {
   fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=' + str)
     .then(r => r.json())
     .then(({ teams }) => {
-      
       document.getElementById('teamPhoto').innerHTML = `
             <img src="${teams[0].strTeamBadge}">
         `
@@ -59,6 +58,132 @@ function searchTeam(str) {
 }
 
 
-
 let search = localStorage.getItem('search')
 searchTeam(search);
+
+// Code that works----------------
+fetch(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${search}`)
+.then(r => r.json())
+.then(({player}) => {
+  console.log(player)
+  document.getElementById('player0').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[0].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[0].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player1').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[1].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[1].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player2').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[2].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[2].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player3').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[3].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[3].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player4').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[4].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[4].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player5').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[5].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[5].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player6').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[6].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[6].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player7').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[7].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[7].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player8').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[8].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[8].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player9').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[9].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[9].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player10').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[10].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[10].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player11').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[11].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[11].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player12').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[12].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[12].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player13').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[13].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[13].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+  document.getElementById('player14').innerHTML = `
+      <div class="card blue-grey darken-1 center white-text">
+        <div class="card-image">
+          <img src="${player[14].strThumb}">
+        </div><!--card-image-->
+          <span class="card-title">${player[14].strPlayer}</span>
+      </div><!--card blue-grey darken-1 center white-text-->
+  `
+})
