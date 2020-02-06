@@ -108,3 +108,6 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   font-size: 18px !important;
 }
 
+#teamBio {
+  margin-top: 0;
+}
