@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>GitSports</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css" type="text/css" media="screen,projection"/>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-2">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">GitSports</a>
+          <ul id="nav-mobile" class="right">
+            <li>
+              <div class="input-field">
+                <input type="text" id="searchBar">
+                <label class="label-icon whtie-text" for="text"></label>
+              </div>
+            <li><a class="btn-floating btn waves-effect waves-light blue-grey darken-2" id="searchBtn"><i
+                  class="material-icons">search</i></a></li>
+            </li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="player.html">Player</a></li>
+          </ul>
+        </div>
+        </ul>
+      </div>
+  </div>
+  </nav>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4">
+        <div id="playerPhoto" class="center"></div>
+        <ul class="center">
+          <li id="team"></li>
+          <li id="birthday"></li>
+          <li id="hometown"></li>
+          <li id="height"></li>
+          <li id="weight"></li>
+        </ul>
+
+      </div>
+      <!--col m5-->
+
+      <div class="col s12 m8">
+        <h2 id="playerName" class="center black-text" ></h2>
+        <p id="bio"></p>
+      </div><!-- col m5-->
+    </div>
+    <!--row-->
+    <!-- Footer -->
+    <footer class="page-footer blue-grey darken-2">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center">
+            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>  
+    <!-- Logo Image need to add 's' to end of 'Sport' -->
+          <img src="./assets/images/updateLogo.png" alt="logo">
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">&copy; Copyright | by Aria, Evan, Mel, and Nok
+          <a class="black-text text-lighten-4 right" href="#">Credits</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/nbaTeams.js"></script>
+    <script src="./assets/js/nbaPlayers.js"></script>
+    <script src="assets/js/player.js"></script>
+</body>
+
+</html>
