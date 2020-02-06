@@ -1,13 +1,42 @@
+
+let searchVal = localStorage.getItem('search') || '';
+
+
+//search bar redirect
+document.getElementById('searchBtn').addEventListener("click", event => {
+
+  searchVal = document.getElementById("searchBar").value.toLowerCase();
+  localStorage.setItem('search', searchVal);
+
+  if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
+    //split name for ajax request
+    let splitName = searchVal.split(" ");
+
+    localStorage.setItem('player', splitName);
+
+    window.location.replace('./player.html')
+  } else {
+    // if team name doesn't include city, go back to previous index with city
+    if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
+      searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)];
+      localStorage.setItem('search', searchVal);
+    }
+    window.location.replace('./team.html');
+  }
+  document.getElementById('searchBar').value = '';
+})
+
+
 fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
-    .then(r => r.json())
-    .then(({events}) => {
-      console.log(events)
-      document.getElementById('games').innerHTML = '';
-      for(let i = 0; i < events.length; i++){
+  .then(r => r.json())
+  .then(({ events }) => {
+    console.log(events)
+    document.getElementById('games').innerHTML = '';
+    for (let i = 0; i < events.length; i++) {
       let imgBanner = events[i].strThumb;
 
       let gameDiv = document.createElement('div');
-      if(imgBanner === null){
+      if (imgBanner === null) {
         imgBanner = './assets/images/nbaLogo.png';
       }
       gameDiv.innerHTML = `
@@ -23,26 +52,15 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
         </div><!--card-->
       </div><!--col s12 m4-->
       `
-      if( i % 3 === 0){
+      if (i % 3 === 0) {
         let row = document.createElement('div');
         row.className = 'row'
         document.getElementById('games').append(row);
       }
       document.getElementById('games').append(gameDiv);
-      }
-
-      
-    })
-    .catch(e => console.error(e));
-
-// <h5>${events[0].dateEventLocal}</h5>
-        // <img width="254px" src="${events[1].strThumb}">
-        // <h5>${events[0].strEventAlternate}</h5>
+    }
 
 
+  })
+  .catch(e => console.error(e));
 
-// <div class="card-content white-text">
-//           <span class="card-title">${events[i].dateEventLocal}</span>
-//           <img width="254px" src="${imgBanner}">
-//           <h5>${events[i].strEventAlternate}</h5>
-//           </div>
