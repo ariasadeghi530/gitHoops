@@ -75,7 +75,10 @@ footer.page-footer {
   margin-top: 50px;
 }
 
-/* .card-image {
-  height: 384px;
-  width: 283px;
+/* img {
+  max-height: 250px;
 } */
+
+.gameImage {
+  height: 220px;
+}

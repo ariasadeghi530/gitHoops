@@ -12,15 +12,14 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
       }
       gameDiv.innerHTML = `
       <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img class="gamesCard" src="${imgBanner}">
-          <span class="card-title">${events[i].dateEventLocal}</span>
+        <div class="card">
+          <div class="card-image">
+            <img class="gameImage" src="${imgBanner}">
+            <span class="card-title">${events[i].dateEventLocal}</span>
           </div><!--card image-->
           <div class="card-content">
-          <p>${events[i].strEventAlternate}</p>
-        </div><!--card content-->
-
+            <p>${events[i].strEventAlternate}</p>
+          </div><!--card content-->
         </div><!--card-->
       </div><!--col s12 m4-->
       `
