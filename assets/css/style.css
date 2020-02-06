@@ -56,8 +56,8 @@ footer.page-footer {
   }
 }
 
-
 /* search styling */
+
 input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+label {
   color: white !important;
 }
@@ -89,6 +89,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 }
 
 /* margin for page elements */
+
 .row {
   margin-top: 50px;
 }
@@ -97,3 +98,9 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   height: 384px;
   width: 283px;
 } */
+
+.playerCardImg {
+  width: 254px;
+  height: 254px;
+}
+

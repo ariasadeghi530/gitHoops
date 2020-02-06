@@ -33,7 +33,7 @@ function searchPlayer(strFirst, strLast) {
     .then(({player}) => {
       
       document.getElementById('playerPhoto').innerHTML = `
-            <img style="width: 254px; height: 254px;" src="${player[0].strCutout}">
+            <img class="playerCardImg" src="${player[0].strCutout}">
         `
       document.getElementById('team').innerHTML = `
             <strong>Team: </strong>${player[0].strTeam}
@@ -62,4 +62,5 @@ function searchPlayer(strFirst, strLast) {
 
 
 let search = (localStorage.getItem('search')).split(" ");
+
 searchPlayer(search[0], search[1]);
