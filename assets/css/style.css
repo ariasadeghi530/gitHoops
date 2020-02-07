@@ -1,12 +1,9 @@
 nav ul a, nav .brand-logo {
-  color: white;
+  color: white; 
 }
-
-#navbarLogo {
-  height: 60px;
-  margin-top: 2px;
+.brand-logo {
+  height: 65px;
 }
-
 img {
   width: 120px;
 }
@@ -37,15 +34,21 @@ footer.page-footer {
   #index-banner .section {
     top: 10%;
   }
+  .brand-logo{
+    height: 63px;
+  }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 600px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
   #index-banner .section {
     top: 10%;
+  }
+  .brand-logo{
+    height: 55px;
   }
 }
 
@@ -124,13 +127,14 @@ html, body {
   margin-top: 0;
 }
 
+
 #map {
   height: 300px;
   width: 100%;
 }
 
 .teamTitle {
-  margin-left: 14%;
+  margin-left: 5%;
 }
 
 #hiddenSearch {
@@ -166,44 +170,22 @@ html, body {
   right: 10px;
 } */
 
-/* map */
-
-#map {
-  height: 250px;
+.carousel-item{
+  margin: 40px 50px;
+  background-color: red;
+  color: white;
 }
 
-/* Optional: Makes the sample page fill the window. */
 
-.controls {
-  background-color: #fff;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 300;
-  height: 29px;
-  margin-left: 17px;
-  margin-top: 10px;
-  outline: none;
-  padding: 0 11px 0 13px;
-  text-overflow: ellipsis;
-  width: 400px;
+.carousel .carousel-item {
+  visibility: visible !important;
 }
 
-.controls:focus {
-  border-color: #4d90fe;
+.carousel-item {
+  margin: 0 0;
 }
 
-.title {
-  font-weight: bold;
-}
-
-#infowindow-content {
-  display: none;
-}
-
-#map #infowindow-content {
-  display: inline;
+.carouselImg0{
+  position: relative;
+  margin: 0;
 }

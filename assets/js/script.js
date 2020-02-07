@@ -1,86 +1,3 @@
-//for mobile navbar drop
-$(document).ready(function () {
-  $('.sidenav').sidenav();
-
-
-});
-$(."search-trigger").click(function() {
-  $(#"search").search();
-  
-})
-
-
-
-
-
-
-
-
-
-
-
-// fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=')
-//     .then(r => r.json())
-//     .then(({teams}) => {
-//         console.log(teams[0])
-//         document.getElementById('teamPhoto').innerHTML = `
-//             <img src="${teams[0].strTeamBadge}">
-//         `
-//         document.getElementById('teamName').innerHTML = `
-//             ${teams[0].strTeam}
-//         `
-//         document.getElementById('sport').innerHTML = `
-//         <strong>Sport: </strong>${teams[0].strSport}
-//         `
-//         document.getElementById('league').innerHTML = `
-//         <strong>League: </strong>${teams[0].strLeague}
-//         `
-//         document.getElementById('stadium').innerHTML = `
-//         <strong>Stadium: </strong>${teams[0].strStadium} (${teams[0].strStadiumLocation})
-//         `
-//         document.getElementById('website').innerHTML = `
-//         <strong>Website: </strong>${teams[0].strWebsite}
-//         `
-//         document.getElementById('bio').innerHTML = `
-//         ${teams[0].strDescriptionEN}
-//         `        
-//     })
-//     .catch(e => console.log(e))
-
-    
-
-// document.getElementById('playerPhoto').innerHTML = 
-
-
-// fetch(`http://www.omdbapi.com/?t=${document.getElementById('title').value}&apikey=trilogy`)
-//         .then(r => r.json())
-//         .then(({ Title, Year, Director, Poster, Plot }) => {
-//           movie = {
-//             title: Title,
-//             year: Year,
-//             director: Director,
-//             plot: Plot
-//           }
-//           document.getElementById('movie').innerHTML = `
-//           <div class="card">
-//             <div class="card-image">
-//               <img src="${Poster}" alt="${Title}">
-//               <span class="card-title">${Title}</span>
-//             </div>
-//             <div class="card-content">
-//               <h4>Directed by ${Director}</h4>
-//               <h5>Year: ${Year}</h5>
-//               <p>${Plot}</p>
-//             </div>
-//             <div class="card-action">
-//               <button class="btn waves-effect waves-light addWatchlist">Add To Watchlist</button>
-//             </div>
-//           </div>
-//         `
-//         document.getElementById('title').value = ''
-//         })
-//         .catch(e => console.error(e))
-
 let searchVal = localStorage.getItem('search') || '';
 
 
@@ -115,7 +32,47 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, {});
+});
 
 
 
+
+
+//News api articles
+fetch(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=f7435c3676b34c89bdb1562b6cac0849`)
+.then(r => r.json())
+.then(({articles}) => {
+  console.log(articles)
+  document.getElementById('carouselImg0').innerHTML = `
+  <img style="width: 100%;" src="${articles[0].urlToImage}">
+  `
+  document.getElementById('carouselContent0').innerHTML = `
+  <h4>${articles[0].title}</h4>
+  <p>${articles[0].description}</p>
+  `
+  document.getElementById('carouselImg1').innerHTML = `
+  <img style="width: 100%;" src="${articles[1].urlToImage}">
+  `
+  document.getElementById('carouselContent1').innerHTML = `
+  <h4>${articles[1].title}</h4>
+  <p>${articles[1].description}</p>
+  `
+  document.getElementById('carouselImg2').innerHTML = `
+  <img style="width: 100%;" src="${articles[2].urlToImage}">
+  `
+  document.getElementById('carouselContent2').innerHTML = `
+  <h4>${articles[2].title}</h4>
+  <p>${articles[2].description}</p>
+  `
+  document.getElementById('carouselImg3').innerHTML = `
+  <img style="width: 100%;" src="${articles[3].urlToImage}">
+  `
+  document.getElementById('carouselContent3').innerHTML = `
+  <h4>${articles[3].title}</h4>
+  <p>${articles[3].description}</p>
+  `
+})
 
