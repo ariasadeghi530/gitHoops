@@ -34,7 +34,7 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
         //iteratively render teams
         for (let i = 0; i < teams.length; i++) {
             let teamDiv = document.createElement('div');
-            teamDiv.classList = 'col s2';
+            teamDiv.classList = 'col s12 m4 l2';
             teamDiv.innerHTML = `
             <div id="teamPhoto${i + 1}">
             <a href="./team.html"><img src="${teams[i].strTeamBadge}" id="${teams[i].strTeam}"></a>

@@ -1,7 +1,9 @@
 nav ul a, nav .brand-logo {
-  color: white;
+  color: white; 
 }
-
+.brand-logo {
+  height: 65px;
+}
 img {
   width: 120px;
 }
@@ -32,15 +34,21 @@ footer.page-footer {
   #index-banner .section {
     top: 10%;
   }
+  .brand-logo{
+    height: 63px;
+  }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 600px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
   #index-banner .section {
     top: 10%;
+  }
+  .brand-logo{
+    height: 55px;
   }
 }
 
@@ -111,13 +119,14 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   margin-top: 0;
 }
 
+
 #map {
   height: 300px;
   width: 100%;
 }
 
 .teamTitle {
-  margin-left: 14%;
+  margin-left: 5%;
 }
 
 #hiddenSearch {
