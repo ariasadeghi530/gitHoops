@@ -20,4 +20,6 @@ fetch(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${teamName}
     
     localStorage.setItem('players', JSON.stringify(currentPlayers));
   })
+
+  .catch(e => console.error(e));
 }
