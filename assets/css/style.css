@@ -117,3 +117,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   width: 100%;
   
 }
+
+.teamTitle{
+  margin-left: 15%;
+}
