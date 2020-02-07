@@ -1,7 +1,9 @@
 nav ul a, nav .brand-logo {
-  color: white;
+  color: white; 
 }
-
+.brand-logo {
+  height: 65px;
+}
 img {
   width: 120px;
 }
@@ -32,6 +34,9 @@ footer.page-footer {
   #index-banner .section {
     top: 10%;
   }
+  .brand-logo{
+    height: 63px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -41,6 +46,9 @@ footer.page-footer {
   }
   #index-banner .section {
     top: 10%;
+  }
+  .brand-logo{
+    height: 55px;
   }
 }
 
