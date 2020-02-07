@@ -7,12 +7,6 @@ nav ul a, nav .brand-logo {
   margin-top: 2px;
 }
 
-@media (max-width: 600px) {
-  .navbar-material .container .nav-wrapper .brand-logo  img {
-    height: 56px;
-  }
-}
-
 img {
   width: 120px;
 }

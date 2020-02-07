@@ -1,3 +1,22 @@
+//for mobile navbar drop
+$(document).ready(function () {
+  $('.sidenav').sidenav();
+
+
+});
+$(."search-trigger").click(function() {
+  $(#"search").search();
+  
+})
+
+
+
+
+
+
+
+
+
 
 
 // fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=')
@@ -88,6 +107,8 @@ if(!(nbaTeamNames.includes(searchVal))) {
 }
 document.getElementById('searchBar').value = '';
 })
+
+
 
 
 

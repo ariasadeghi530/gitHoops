@@ -1,3 +1,7 @@
+//for mobile navbar drop
+$(document).ready(function () {
+  $('.sidenav').sidenav();
+});
 
 
 let searchVal = localStorage.getItem('search') || '';

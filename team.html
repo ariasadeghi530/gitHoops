@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>GitSports</title>
+  <title>GitHoops</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -14,31 +14,54 @@
 
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar-fixed">
-    <nav class="blue-grey darken-2">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo"><img src="./assets/images/updateLogo.png" alt="brand-logo" id="navbarLogo"></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <div class="input-field">
-                <input type="text" id="searchBar">
-                <label class="label-icon white-text" for="text"></label>
-              </div>
-            <li><a class="btn-floating btn waves-effect waves-light blue-grey darken-2" id="searchBtn"><i
-                  class="material-icons">search</i></a></li>
-            </li>
-            <li><a href="#">Games</a></li>
-            <li><a href="teams.html">Teams</a></li>
-            <li><a href="player.html">Player</a></li>
-          </ul>
-        </div>
-        </ul>
-      </div>
-  </div>
-  </nav>
-  </div>
+<!-- Navbar -->
+  <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;">
+    <div class="container">
+      <div class="nav-wrapper">
+  
+        <a href="index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
+            alt="brand-logo" id="navbarLogo"></a>
+            
+<!-- for search mobile -->
+<ul class="right ">
+  <a href="#" class="search-trigger" data-target="searchBar">
+    <i class="material-icons" id="searchIcon">search</i>
+  </a>
+</ul>
+<!-- search button  -->
+
+<ul class="right hide-on-med-and-down">
+  <li>
+    <div class="input-field" id="searchText">
+      <input type="text" id="searchBar">
+      <label class="label-icon white-text" for="text"></label>
+    </div>
+  <li><a class="btn-floating btn waves-effect waves-light light-blue darken-4" id="searchBtn"><i
+        class="material-icons">search</i></a></li>
+  </li>
+</ul>
+
+<!-- menu for moblie  -->
+<a href="#" class="sidenav-trigger" data-target="mobile-nav">
+  <i class="material-icons" id="mobileIcons">menu</i>
+</a>
+
+<!-- mune button  -->
+<ul class="right hide-on-med-and-down" id="menu">
+  <li><a href="#">Games</a></li>
+  <li><a href="teams.html">Teams</a></li>
+  <li><a href="player.html">Player</a></li>
+</ul>
+</div>
+</div>
+</nav>
+  
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#">Games</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="player.html">Player</a></li>
+  </ul>
+
 
   <div class="container">
     <div class="row">
@@ -73,7 +96,7 @@
 
 
     <!-- Footer -->
-    <footer class="page-footer blue-grey darken-2">
+    <footer class="page-footer light-blue darken-4">
       <div class="container">
         <div class="row">
           <div class="col s12 center">
@@ -90,12 +113,16 @@
       </div>
     </footer>
 
-    <script src="./assets/js/nbaTeams.js"></script>
-    <script src="./assets/js/nbaPlayers.js"></script>
-    // api googlemap key
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbOrVjet_s1nbRMEgLVNsx0reP9G6Ju6g&libraries=places&callback=initMap" async
       defer></script>
+
     <script src="./assets/js/team.js"></script>
+    <script src="./assets/js/nbaTeams.js"></script>
+    <script src="./assets/js/nbaPlayers.js"></script>
 </body>
 
 </html>
