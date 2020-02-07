@@ -126,7 +126,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 }
 
 .teamTitle {
-  margin-left: 14%;
+  margin-left: 5%;
 }
 
 #hiddenSearch {
