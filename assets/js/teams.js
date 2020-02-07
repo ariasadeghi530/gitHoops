@@ -30,8 +30,8 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 //list all the teams badges on page
 fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
     .then(r => r.json())
-    // .then(res => console.log(res))
     .then(({ teams }) => {
+        //iteratively render teams
         for (let i = 0; i < teams.length; i++) {
             let teamDiv = document.createElement('div');
             teamDiv.classList = 'col s2';
