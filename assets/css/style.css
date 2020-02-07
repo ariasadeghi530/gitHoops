@@ -111,3 +111,26 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 #teamBio {
   margin-top: 0;
 }
+
+
+.carousel-item{
+  margin: 40px 50px;
+  background-color: red;
+  color: white;
+}
+
+
+.carousel .carousel-item {
+  visibility: visible !important;
+}
+
+.carousel-item {
+  margin: 50px 0;
+}
+
+
+
+.carouselImg0{
+  position: relative;
+  margin: 0;
+}
