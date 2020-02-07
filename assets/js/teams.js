@@ -60,4 +60,10 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=nba')
 //clicking on team image redirects to team page
 document.getElementById('teamList').addEventListener('click', event => {
     localStorage.setItem('search', event.target.id);
-})
+});
+
+//for mobile navbar drop
+document.addEventListener('DOMContentLoaded', function () {
+    let elems = document.querySelectorAll('.sidenav');
+    let instances = M.Sidenav.init(elems, 'left');
+});

@@ -30,13 +30,13 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
   .then(r => r.json())
   .then(({ events }) => {
-    
+
     document.getElementById('games').innerHTML = '';
     for (let i = 0; i < events.length; i++) {
       let imgBanner = events[i].strThumb;
       let localTime = events[i].strTimeLocal;
       let gameDiv = document.createElement('div');
-      if (localTime ===  null || "") {
+      if (localTime === null || "") {
         localTime = " ";
       }
       if (imgBanner === null) {
@@ -67,3 +67,9 @@ fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
   })
   .catch(e => console.error(e));
 
+
+//for mobile navbar drop
+document.addEventListener('DOMContentLoaded', function () {
+  let elems = document.querySelectorAll('.sidenav');
+  let instances = M.Sidenav.init(elems, 'left');
+});

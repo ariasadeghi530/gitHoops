@@ -9,49 +9,53 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="screen,projection"/>
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="screen,projection" />
 </head>
 
 <body>
-    <!-- Navbar -->
-    
-    <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;">
-      <div class="container">
-        <div class="nav-wrapper">
-    
-          <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
-              alt="brand-logo" id="navbarLogo"></a>
-    
-          <!-- for search mobile (button) -->
-          <ul class="right">
-            <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
-              <i class="material-icons" id="searchIcon">search</i>
-            </a>
-          </ul>
-    
-          <!-- search bar  -->
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <div class="input-field" id="searchText">
-                <input type="text" id="searchBar">
-                <label class="label-icon white-text" for="text"></label>
-              </div>
-            </li>
-          </ul>
-          <!-- menu for moblie  -->
-          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-            <i class="material-icons" id="mobileIcons">menu</i>
+  <!-- Navbar -->
+  <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;">
+    <div class="container">
+      <div class="nav-wrapper">
+
+        <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
+            alt="brand-logo" id="navbarLogo"></a>
+
+        <!-- for search mobile (button) -->
+        <ul class="right">
+          <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
+            <i class="material-icons" id="searchIcon">search</i>
           </a>
-          <!-- menu button  -->
-          <ul class="right hide-on-med-and-down" id="menu">
-            <li><a href="./games.html">Games</a></li>
-            <li><a href="./teams.html">Teams</a></li>
-            <!-- <li><a href="player.html">Player</a></li> -->
-          </ul>
-        </div>
+        </ul>
+
+        <!-- search bar  -->
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <div class="input-field" id="searchText">
+              <input type="text" id="searchBar">
+              <label class="label-icon white-text" for="text"></label>
+            </div>
+          </li>
+        </ul>
+        <!-- menu for moblie  -->
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons" id="mobileIcons">menu</i>
+        </a>
+        <!-- menu button  -->
+        <ul class="right hide-on-med-and-down" id="menu">
+          <li><a href="./games.html">Games</a></li>
+          <li><a href="./teams.html">Teams</a></li>
+          <!-- <li><a href="player.html">Player</a></li> -->
+        </ul>
       </div>
-    </nav>
-  
+    </div>
+  </nav>
+
+  <!-- for mobile dropdown -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="./games.html">Games</a></li>
+    <li><a href="./teams.html">Teams</a></li>
+  </ul>
 
   <div class="container">
     <div id="games" class="row">
@@ -86,9 +90,9 @@
   </footer>
 
 
-    <script src="./assets/js/nbaTeams.js"></script>
-    <script src="./assets/js/nbaPlayers.js"></script>
-    <script src="assets/js/games.js"></script>
+  <script src="./assets/js/nbaTeams.js"></script>
+  <script src="./assets/js/nbaPlayers.js"></script>
+  <script src="assets/js/games.js"></script>
 
 </body>
 

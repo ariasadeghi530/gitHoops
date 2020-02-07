@@ -11,7 +11,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
   searchVal = document.getElementById("searchBar").value.toLowerCase();
   localStorage.setItem('search', searchVal);
 
-  
+
   if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
 
     //split name for ajax request
@@ -34,8 +34,8 @@ document.getElementById('searchBtn').addEventListener("click", event => {
 function searchPlayer(strFirst, strLast) {
   fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=' + strFirst + '%20' + strLast)
     .then(r => r.json())
-    .then(({player}) => {
-      
+    .then(({ player }) => {
+
       document.getElementById('playerPhoto').innerHTML = `
             <img class="playerCardImg" src="${player[0].strCutout}">
         `
@@ -62,9 +62,15 @@ function searchPlayer(strFirst, strLast) {
         `
     })
     .catch(e => console.error(e));
-  }
+}
 
 
 let search = (localStorage.getItem('search')).split(" ");
 
 searchPlayer(search[0], search[1]);
+
+//for mobile navbar drop
+document.addEventListener('DOMContentLoaded', function () {
+  let elems = document.querySelectorAll('.sidenav');
+  let instances = M.Sidenav.init(elems, 'left');
+});
