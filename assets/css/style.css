@@ -111,6 +111,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   margin-top: 0;
 }
 
+
 #map {
   height: 300px;
   width: 100%;
