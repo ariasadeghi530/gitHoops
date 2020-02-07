@@ -107,6 +107,42 @@ html, body {
   margin-top: 50px;
 }
 
+.gameImage {
+  height: 220px;
+}
+
+.playerCardImg {
+  width: 254px;
+  height: 254px;
+}
+
+.timeZone {
+  font-size: 18px !important;
+}
+
+#teamBio {
+  margin-top: 0;
+}
+
+#map {
+  height: 300px;
+  
+  width: 100%;
+  
+}
+
+.teamTitle{
+  margin-left: 14%;
+}
+
+#hiddenSearch {
+  display: hidden;
+}
+
+.footie {
+  padding-top: 0px;
+}
+
 /* map */
 
 #map {

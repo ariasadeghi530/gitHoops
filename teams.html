@@ -15,203 +15,66 @@
 <body>
 
   <!-- Navbar -->
+  
   <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;">
     <div class="container">
       <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png" alt="brand-logo"
-            id="navbarLogo"></a>
   
-<!-- for search mobile -->
-<ul class="right ">
-  <a href="#" class="search-trigger" data-target="searchBar">
-    <i class="material-icons" id="searchIcon">search</i>
-  </a>
-</ul>
-<!-- search button  -->
-
-<ul class="right hide-on-med-and-down">
-  <li>
-    <div class="input-field" id="searchText">
-      <input type="text" id="searchBar">
-      <label class="label-icon white-text" for="text"></label>
+        <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
+            alt="brand-logo" id="navbarLogo"></a>
+  
+        <!-- for search mobile (button) -->
+        <ul class="right">
+          <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
+            <i class="material-icons" id="searchIcon">search</i>
+          </a>
+        </ul>
+  
+        <!-- search bar  -->
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <div class="input-field" id="searchText">
+              <input type="text" id="searchBar">
+              <label class="label-icon white-text" for="text"></label>
+            </div>
+          </li>
+        </ul>
+        <!-- menu for moblie  -->
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons" id="mobileIcons">menu</i>
+        </a>
+        <!-- menu button  -->
+        <ul class="right hide-on-med-and-down" id="menu">
+          <li><a href="./games.html">Games</a></li>
+          <li><a href="./teams.html">Teams</a></li>
+          <!-- <li><a href="player.html">Player</a></li> -->
+        </ul>
+      </div>
     </div>
-  <li><a class="btn-floating btn waves-effect waves-light light-blue darken-4" id="searchBtn"><i
-        class="material-icons">search</i></a></li>
-  </li>
-</ul>
+  </nav>
 
-<!-- menu for moblie  -->
-<a href="#" class="sidenav-trigger" data-target="mobile-nav">
-  <i class="material-icons" id="mobileIcons">menu</i>
-</a>
-
-<!-- mune button  -->
-<ul class="right hide-on-med-and-down" id="menu">
-  <li><a href="#">Games</a></li>
-  <li><a href="teams.html">Teams</a></li>
-  <li><a href="player.html">Player</a></li>
-</ul>
-</div>
-</div>
-</nav>
-  
-  <ul class="sidenav" id="mobile-nav">
-    <li><a href="#">Games</a></li>
-    <li><a href="teams.html">Teams</a></li>
-    <li><a href="player.html">Player</a></li>
-  </ul>
-  <div class="container">
-    <div class="row">
-      <div class="col s2">
-        <div id="teamPhoto1"></div>
-        <h5 id="teamName1"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto2"></div>
-        <h5 id="teamName2"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto3"></div>
-        <h5 id="teamName3"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto4"></div>
-        <h5 id="teamName4"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto5"></div>
-        <h5 id="teamName5"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto6"></div>
-        <h5 id="teamName6"></h5>
-      </div>
-    </div><!--row-->
-    
-    <div class="row">
-      <div class="col s2">
-        <div id="teamPhoto7"></div>
-        <h5 id="teamName7"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto8"></div>
-        <h5 id="teamName8"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto9"></div>
-        <h5 id="teamName9"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto10"></div>
-        <h5 id="teamName10"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto11"></div>
-        <h5 id="teamName11"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto12"></div>
-        <h5 id="teamName12"></h5>
-      </div>
-    </div><!--row-->
-    
-    <div class="row">
-      <div class="col s2">
-        <div id="teamPhoto13"></div>
-        <h5 id="teamName13"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto14"></div>
-        <h5 id="teamName14"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto15"></div>
-        <h5 id="teamName15"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto16"></div>
-        <h5 id="teamName16"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto17"></div>
-        <h5 id="teamName17"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto18"></div>
-        <h5 id="teamName18"></h5>
-      </div>
-    </div><!--row-->
-    
-    <div class="row">
-      <div class="col s2">
-        <div id="teamPhoto19"></div>
-        <h5 id="teamName19"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto20"></div>
-        <h5 id="teamName20"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto21"></div>
-        <h5 id="teamName21"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto22"></div>
-        <h5 id="teamName22"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto23"></div>
-        <h5 id="teamName23"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto24"></div>
-        <h5 id="teamName24"></h5>
-      </div>
-    </div><!--row-->
-    
-    <div class="row">
-      <div class="col s2">
-        <div id="teamPhoto25"></div>
-        <h5 id="teamName25"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto26"></div>
-        <h5 id="teamName26"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto27"></div>
-        <h5 id="teamName27"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto28"></div>
-        <h5 id="teamName28"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto29"></div>
-        <h5 id="teamName29"></h5>
-      </div>
-      <div class="col s2">
-        <div id="teamPhoto30"></div>
-        <h5 id="teamName30"></h5>
-      </div>
-    </div><!--row-->
+  <div class="container" >
+    <div class="row" id="teamList">
+      
+    </div>
+  </div>
     
 
 
 
     <!-- Footer -->
-    <footer class="page-footer light-blue darken-4">
+    <footer class="page-footer light-blue darken-4 footie">
       <div class="container">
         <div class="row">
           <div class="col s12 center">
-            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>
+            <p class="grey-text text-lighten-4">Team Info . Games . Sports News</p>
+            <!-- Logo Image need to add 's' to end of 'Sport' -->
             <img src="./assets/images/updateLogo.png" alt="logo">
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">&copy; Copyright | by Aria, Evan, Mel, and Nok
-          <a class="black-text text-lighten-4 right" href="#">Credits</a>
+        <div class="container center">&copy; Copyright | by Aria, Evan, Mel, and Nok
         </div>
       </div>
     </footer>

@@ -10,11 +10,52 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="screen,projection"/>
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="screen,projection" />
 </head>
 
 <body>
   <!-- Navbar -->
+
+  <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;">
+    <div class="container">
+      <div class="nav-wrapper">
+
+        <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
+            alt="brand-logo" id="navbarLogo"></a>
+
+        <!-- for search mobile (button) -->
+        <ul class="right">
+          <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
+            <i class="material-icons" id="searchIcon">search</i>
+          </a>
+        </ul>
+
+        <!-- search bar  -->
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <div class="input-field" id="searchText">
+              <input type="text" id="searchBar">
+              <label class="label-icon white-text" for="text"></label>
+            </div>
+          </li>
+        </ul>
+        <!-- menu for moblie  -->
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons" id="mobileIcons">menu</i>
+        </a>
+        <!-- menu button  -->
+        <ul class="right hide-on-med-and-down" id="menu">
+          <li><a href="./games.html">Games</a></li>
+          <li><a href="./teams.html">Teams</a></li>
+          <!-- <li><a href="player.html">Player</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-2">
 
     <ul class="sidenav" id="mobile-nav">
     <li><a href="#">Games</a></li>
@@ -26,45 +67,24 @@
     <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;"> 
       <div class="container">
         <div class="nav-wrapper">
-          
-          <a href="index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png" alt="brand-logo" id="navbarLogo"></a>
-
-
-<!-- for search mobile -->
-          <ul class="right " >
-          <a href="#" class="search-trigger" data-target="searchBar">
-            <i class="material-icons" id="searchIcon">search</i>
-          </a>
-          </ul>
- <!-- search button  -->
-           
-            <ul class="right hide-on-med-and-down" >
-              <li>
-                <div class="input-field"id="searchText" >
+          <a href="./index.html" class="brand-logo">GitSports</a>
+          <ul id="nav-mobile" class="right">
+            <li>
+                <div class="input-field">
                   <input type="text" id="searchBar">
                   <label class="label-icon white-text" for="text"></label>
                 </div>
-              <li><a class="btn-floating btn waves-effect waves-light light-blue darken-4" id="searchBtn"><i
-                    class="material-icons">search</i></a></li>
-              </li>
-            </ul>
-
-<!-- menu for moblie  -->
-            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-              <i class="material-icons" id="mobileIcons">menu</i>
-            </a>
-
-<!-- mune button  -->
-            <ul class="right hide-on-med-and-down" id="menu">
-              <li><a href="#">Games</a></li>
-              <li><a href="teams.html">Teams</a></li>
-              <li><a href="player.html">Player</a></li>
-            </ul>  
+              <li><a class="btn-floating btn waves-effect waves-light blue-grey darken-2" id="searchBtn"><i class="material-icons">search</i></a></li>
+            </li>
+            <li><a href="./games.html">Games</a></li>
+            <li><a href="./teams.html">Teams</a></li>
+            <!- <li><a href="player.html">Player</a></li>
+          </ul>
         </div>
       </div>
     </nav>
-    
-  
+  </div>
+   -->
 
 
   <!-- Top Section/***Need to fix img src -->
@@ -76,61 +96,55 @@
         <div class="row center">
           <h5 class="header col s12 light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </h5>
         </div>
-  
+
       </div>
     </div>
     <div class="parallax"><img src="#" alt="image"></div>
   </div>
-  
-  
+
+
   <div class="container">
-    <!-- <div class="section"> -->
-  
+    <div class="section">
+
       <!--  Bottom Section   -->
       <div class="row">
         <div class="col s12 m6">
           <div class="icon-block">
-            <h2 class="center black-text"><i>Game</i></h2>
-            <h5 class="center">Google Maps API</h5>
+            <a href="./games.html">
+              <h2 class="center black-text"><i>Games</i></h2>
+            </a>
 
-            <p id="mapGame" class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
-              <div id="map"> </div>
+            <p class="light">See all recent and upcoming games in the NBA, as well as what time they air.</p>
           </div>
         </div>
 
         <div class="col s12 m6">
           <div class="icon-block">
-            <h2 class="center black-text"><i>Player</i></h2>
-            <h5 class="center">mySportsDB API</h5>
+            <a href="./teams.html">
+              <h2 class="center black-text"><i>Teams</i></h2>
+            </a>
 
-            <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.</p>
-
-              
+            <p class="light">Explore all the current teams in the league and click a logo to learn more about that team!
+              You can also see where their stadium is located, and utilize Google maps to naviagate there!</p>
           </div>
         </div>
       </div>
     </div>
+</div>
 
     <!-- Footer -->
-    <footer class="page-footer light-blue darken-4">
+    <footer class="page-footer light-blue darken-4 footie">
       <div class="container">
         <div class="row">
           <div class="col s12 center">
-            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>
-         
+            <p class="grey-text text-lighten-4">Team Info . Games . Sports News</p>
+            <!-- Logo Image need to add 's' to end of 'Sport' -->
             <img src="./assets/images/updateLogo.png" alt="logo">
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">&copy; Copyright | by Aria, Evan, Mel, and Nok
-          <a class="black-text text-lighten-4 right" href="#">Credits</a>
+        <div class="container center">&copy; Copyright | by Aria, Evan, Mel, and Nok
         </div>
       </div>
     </footer>
@@ -144,7 +158,7 @@
       defer></script>
 
     <script src="./assets/js/nbaTeams.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/nbaPlayers.js"></script>
 </body>
 

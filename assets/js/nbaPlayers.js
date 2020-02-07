@@ -11,8 +11,15 @@ fetch(`https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=${teamName}
   .then(r => r.json())
   .then(({player}) => {
     for(let j = 0; j < player.length; j++){
-      currentPlayers.push(player[j].strPlayer);
+      currentPlayers.push(((player[j].strPlayer).toLowerCase()).trim());
     }
+    
+    if(currentPlayers.length > 551){
+      return;
+    }
+    
     localStorage.setItem('players', JSON.stringify(currentPlayers));
   })
+
+  .catch(e => console.error(e));
 }
