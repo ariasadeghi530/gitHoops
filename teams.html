@@ -14,30 +14,43 @@
 
 <body>
   <!-- Navbar -->
-  <div class="navbar-fixed">
-    <nav class="blue-grey darken-2">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo">GitSports</a>
-          <ul id="nav-mobile" class="right">
-            <li>
-              <div class="input-field">
-                <input type="text" id="searchBar">
-                <label class="label-icon whtie-text" for="text"></label>
-              </div>
-            <li><a class="btn-floating btn waves-effect waves-light blue-grey darken-2" id="searchBtn"><i
-                  class="material-icons">search</i></a></li>
-            </li>
-            <li><a href="./games.html">Games</a></li>
-            <li><a href="./teams.html">Teams</a></li>
-            <li><a href="./player.html">Player</a></li>
-          </ul>
-        </div>
+  
+  <nav class="navbar-material light-blue darken-4" style="padding: 0px 10px;">
+    <div class="container">
+      <div class="nav-wrapper">
+  
+        <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
+            alt="brand-logo" id="navbarLogo"></a>
+  
+        <!-- for search mobile (button) -->
+        <ul class="right">
+          <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
+            <i class="material-icons" id="searchIcon">search</i>
+          </a>
+        </ul>
+  
+        <!-- search bar  -->
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <div class="input-field" id="searchText">
+              <input type="text" id="searchBar">
+              <label class="label-icon white-text" for="text"></label>
+            </div>
+          </li>
+        </ul>
+        <!-- menu for moblie  -->
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons" id="mobileIcons">menu</i>
+        </a>
+        <!-- menu button  -->
+        <ul class="right hide-on-med-and-down" id="menu">
+          <li><a href="./games.html">Games</a></li>
+          <li><a href="./teams.html">Teams</a></li>
+          <!-- <li><a href="player.html">Player</a></li> -->
         </ul>
       </div>
-  </div>
+    </div>
   </nav>
-  </div>
 
   <div class="container" >
     <div class="row" id="teamList">
@@ -49,19 +62,18 @@
 
 
     <!-- Footer -->
-    <footer class="page-footer blue-grey darken-2">
+    <footer class="page-footer light-blue darken-4 footie">
       <div class="container">
         <div class="row">
           <div class="col s12 center">
-            <p class="grey-text text-lighten-4">Players Info . Games . Sports News</p>
+            <p class="grey-text text-lighten-4">Team Info . Games . Sports News</p>
             <!-- Logo Image need to add 's' to end of 'Sport' -->
             <img src="./assets/images/updateLogo.png" alt="logo">
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">&copy; Copyright | by Aria, Evan, Mel, and Nok
-          <a class="black-text text-lighten-4 right" href="#">Credits</a>
+        <div class="container center">&copy; Copyright | by Aria, Evan, Mel, and Nok
         </div>
       </div>
     </footer>

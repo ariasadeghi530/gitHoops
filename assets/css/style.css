@@ -121,3 +121,11 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 .teamTitle{
   margin-left: 14%;
 }
+
+#hiddenSearch {
+  display: hidden;
+}
+
+.footie {
+  padding-top: 0px;
+}
