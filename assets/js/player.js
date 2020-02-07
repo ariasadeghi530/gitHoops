@@ -1,8 +1,3 @@
-//for mobile navbar drop
-$(document).ready(function () {
-  $('.sidenav').sidenav();
-});
-
 
 //search bar redirect
 let searchVal = localStorage.getItem('search') || '';

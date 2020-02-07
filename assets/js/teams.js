@@ -1,8 +1,3 @@
-//for mobile navbar drop
-$(document).ready(function () {
-    $('.sidenav').sidenav();
-});
-
 
 let searchVal = localStorage.getItem('search') || '';
 
@@ -67,3 +62,5 @@ document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.sidenav');
     let instances = M.Sidenav.init(elems, 'left');
 });
+
+
