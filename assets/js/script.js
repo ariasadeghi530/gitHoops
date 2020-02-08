@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 fetch(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=f7435c3676b34c89bdb1562b6cac0849`)
 .then(r => r.json())
 .then(({articles}) => {
-  console.log(articles)
+  
   document.getElementById('carouselImg0').innerHTML = `
   <img style="width: 100%;" src="${articles[0].urlToImage}">
   `
@@ -75,4 +75,13 @@ fetch(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=f7
   <p>${articles[3].description}</p>
   `
 })
+
+
+fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news`)
+  .then(r => r.json())
+  .then( (data) => {
+    console.log(data);
+  })
+  .catch(e => console.error(e))
+
 
