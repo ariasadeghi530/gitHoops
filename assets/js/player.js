@@ -62,7 +62,7 @@ function searchPlayer(strFirst, strLast) {
 
 
 let search = (localStorage.getItem('search')).split(" ");
-
+console.log(search);
 searchPlayer(search[0], search[1]);
 
 //for mobile navbar drop
