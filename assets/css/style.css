@@ -1,9 +1,11 @@
 nav ul a, nav .brand-logo {
-  color: white; 
+  color: white;
 }
+
 .brand-logo {
   height: 65px;
 }
+
 img {
   width: 120px;
 }
@@ -34,7 +36,7 @@ footer.page-footer {
   #index-banner .section {
     top: 10%;
   }
-  .brand-logo{
+  .brand-logo {
     height: 63px;
   }
 }
@@ -47,7 +49,7 @@ footer.page-footer {
   #index-banner .section {
     top: 10%;
   }
-  .brand-logo{
+  .brand-logo {
     height: 55px;
   }
 }
@@ -89,7 +91,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 }
 
 .material-icons.active {
-  color: white !important;
+  color: #01579b !important;
 }
 
 .input-field [type=text] {
@@ -107,8 +109,8 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 }
 
 .playerCardImg {
-  width: 254px;
-  height: 254px;
+  width: 100%;
+  height: 100%;
 }
 
 .timeZone {
@@ -119,7 +121,6 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   margin-top: 0;
 }
 
-
 #map {
   height: 300px;
   width: 100%;
@@ -129,45 +130,15 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   margin-left: 5%;
 }
 
-#hiddenSearch {
-  display: hidden;
-}
-
 .footie {
   padding-top: 0px;
 }
 
-/* .nav-wrapper .input-field input[type=search] {
-  height: 64px;
-}
-
-.nav-wrapper input[type="search"]:focus {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20%;
-}
-
-.input-field label {
-  max-height: 64px;
-}
-
-.nav-wrapper input[type="search"]:focus~.label-icon.active {
-  position: fixed;
-  left: 10px;
-}
-
-.nav-wrapper input[type="search"]:focus~.closed {
-  position: fixed;
-  right: 10px;
-} */
-
-.carousel-item{
+.carousel-item {
   margin: 40px 50px;
   background-color: red;
   color: white;
 }
-
 
 .carousel .carousel-item {
   visibility: visible !important;
@@ -177,7 +148,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
   margin: 0 0;
 }
 
-.carouselImg0{
+.carouselImg0 {
   position: relative;
   margin: 0;
 }
