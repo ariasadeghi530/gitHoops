@@ -9,32 +9,18 @@ let long = JSON.parse(localStorage.getItem('lon'));
 
 function initMap() {
 }
+//capitalize first letters of strings
+function toUpper(str) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map(function (word) {
+      return word[0].toUpperCase() + word.substr(1);
+    })
+    .join(' ');
+}
 
-document.getElementById('searchBtn').addEventListener("click", event => {
-
-  searchVal = document.getElementById("searchBar").value.toLowerCase();
-  localStorage.setItem('search', searchVal);
-
-  if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
-    let splitName = searchVal.split(" ");
-
-    localStorage.setItem('player', splitName);
-
-    window.location.replace('./player.html');
-  } else {
-
-    // if team name doesn't include city, go back to previous index with city
-    if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
-      searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)]
-      localStorage.setItem('search', searchVal);
-    }
-    searchTeam(searchVal);
-  }
-  document.getElementById('searchBar').value = '';
-})
-
-
-
+//render team with info and map of stadium
 function searchTeam(str) {
   fetch('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=' + str)
     .then(r => r.json())
@@ -64,7 +50,7 @@ function searchTeam(str) {
       fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${teams[0].strStadium}&key=${apiKey}`)
         .then(r => r.json())
         .then(({ results }) => {
-       
+
 
           latit = results[0].geometry.location.lat;
           localStorage.setItem('lat', latit);
@@ -85,30 +71,34 @@ function searchTeam(str) {
 }
 
 
-
+//render when redirected
 let search = localStorage.getItem('search')
 searchTeam(search);
 
-// Code that works----------------
+
+// capitalize first letters of team names for AJAX request
+let capSearch = toUpper(search);
+
+//render roster on load
 fetch(url, {
   method: 'GET',
   headers: headers,
 })
   .then(r => r.json())
-  .then(( {activeplayers} ) => {
-    
-    for (let i = 0; i < activeplayers.playerentry.length; i++){
-    
-      if (activeplayers.playerentry[i].hasOwnProperty('team')){
+  .then(({ activeplayers }) => {
 
-      if ((activeplayers.playerentry[i].team.City) + ' ' + (activeplayers.playerentry[i].team.Name) === search){
+    for (let i = 0; i < activeplayers.playerentry.length; i++) {
 
-        let playerName = activeplayers.playerentry[i].player.FirstName + ' ' + activeplayers.playerentry[i].player.LastName;
-        let playerImg = activeplayers.playerentry[i].player.officialImageSrc;
-         
-        let playerCardDiv = document.createElement('div');
-        playerCardDiv.classList = "col s6 m4"
-        playerCardDiv.innerHTML = `
+      if (activeplayers.playerentry[i].hasOwnProperty('team')) {
+
+        if ((activeplayers.playerentry[i].team.City) + ' ' + (activeplayers.playerentry[i].team.Name) === capSearch) {
+
+          let playerName = activeplayers.playerentry[i].player.FirstName + ' ' + activeplayers.playerentry[i].player.LastName;
+          let playerImg = activeplayers.playerentry[i].player.officialImageSrc;
+
+          let playerCardDiv = document.createElement('div');
+          playerCardDiv.classList = "col s6 m4"
+          playerCardDiv.innerHTML = `
       <div class="card grey lighten-4 center black-text">
         <div class="card-image">
           <a href="./player.html"><img src="${playerImg}" alt="roster-image-not-found" id="${playerName}"></a>
@@ -116,17 +106,41 @@ fetch(url, {
           <span class="card-title">${playerName}</span>
       </div><!--card grey lighten-4 center black-text-->
        `
-       document.getElementById('playerCards').append(playerCardDiv);
+          document.getElementById('playerCards').append(playerCardDiv);
 
-      }
+        }
       }
     }
   })
 
+// search bar event listener
+document.getElementById('searchBtn').addEventListener("click", event => {
+
+  searchVal = document.getElementById("searchBar").value.toLowerCase();
+  localStorage.setItem('search', searchVal);
+
+  if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
+    let splitName = searchVal.split(" ");
+
+    localStorage.setItem('player', splitName);
+
+    window.location.replace('./player.html');
+  } else {
+
+    // if team name doesn't include city, go back to previous index with city
+    if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
+      searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)]
+      localStorage.setItem('search', searchVal);
+    }
+    searchTeam(searchVal);
+  }
+  document.getElementById('searchBar').value = '';
+})
+
 
 //event listener
 document.getElementById('playerCards').addEventListener('click', event => {
-  console.log(event.target.id);
+
   localStorage.setItem('search', (event.target.id).toLowerCase())
 })
 
