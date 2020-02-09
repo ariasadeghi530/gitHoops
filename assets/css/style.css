@@ -39,6 +39,10 @@ footer.page-footer {
   .brand-logo {
     height: 63px;
   }
+  .input-field input[type=search] {
+    width: 150px !important;
+    height: 64px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -52,6 +56,13 @@ footer.page-footer {
   .brand-logo {
     height: 55px;
   }
+  .input-field input[type=search] {
+    width: 150px !important;
+    height: 56px !important;
+  }
+  .material-icons {
+    margin-top: 0px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -63,6 +74,18 @@ footer.page-footer {
 @media only screen and (max-width: 600px) {
   .parallax-container .section {
     top: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .input-field input[type=search] {
+    width: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .input-field input[type=search] {
+    width: 25px !important;
   }
 }
 
@@ -88,6 +111,7 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 
 .material-icons {
   color: white !important;
+  margin-top: 20%;
 }
 
 .material-icons.active {
@@ -151,4 +175,8 @@ input-field input[type=text]+label, .materialize-textarea:focus:not([readonly])+
 .carouselImg0 {
   position: relative;
   margin: 0;
+}
+
+.input-field input[type=search] {
+  height: 64px;
 }

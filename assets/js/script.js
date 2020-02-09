@@ -24,8 +24,14 @@ fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news`)
 
 //search bar redirect
 document.getElementById('searchBtn').addEventListener("click", event => {
-  event.preventDefault()
+  event.preventDefault();
   searchVal = document.getElementById("searchBar").value.toLowerCase();
+
+  //check if anything has been typed
+  if((searchVal === '')){
+    document.getElementById('searchBar').focus();
+  }
+  else{
   localStorage.setItem('search', searchVal);
 
   //change page to player page if name is in array of players
@@ -46,7 +52,8 @@ document.getElementById('searchBtn').addEventListener("click", event => {
     window.location.replace('./team.html');
   }
   document.getElementById('searchBar').value = '';
-})
+}
+});
 
 
 //for mobile navbar drop

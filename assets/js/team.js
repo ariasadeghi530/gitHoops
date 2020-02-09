@@ -116,29 +116,38 @@ fetch(url, {
     }
   })
 
-// search bar event listener
+//search bar redirect
 document.getElementById('searchBtn').addEventListener("click", event => {
-
+  event.preventDefault();
   searchVal = document.getElementById("searchBar").value.toLowerCase();
-  localStorage.setItem('search', searchVal);
 
-  if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
-    let splitName = searchVal.split(" ");
-
-    localStorage.setItem('player', splitName);
-
-    window.location.replace('./player.html');
-  } else {
-
-    // if team name doesn't include city, go back to previous index with city
-    if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
-      searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)]
-      localStorage.setItem('search', searchVal);
-    }
-    searchTeam(searchVal);
+  //check if anything has been typed
+  if ((searchVal === '')) {
+    document.getElementById('searchBar').focus();
   }
-  document.getElementById('searchBar').value = '';
-})
+  else {
+    localStorage.setItem('search', searchVal);
+
+    //change page to player page if name is in array of players
+    if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
+      //split name for ajax request
+      let splitName = searchVal.split(" ");
+
+      localStorage.setItem('player', splitName);
+
+      window.location.replace('./player.html')
+    } else {
+
+      // if team name doesn't include city, go back to previous index with city
+      if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
+        searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)];
+        localStorage.setItem('search', searchVal);
+      }
+      window.location.replace('./team.html');
+    }
+    document.getElementById('searchBar').value = '';
+  }
+});
 
 
 //event listener
