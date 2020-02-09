@@ -55,7 +55,8 @@ fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news`)
   .then(r => r.json())
   .then(({ articles }) => {
     console.log(articles);
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
+      
       document.getElementById(`carouselImg${i}`).innerHTML = `
   <img style="width: 100%; height: 275px;" src="${articles[i].images[0].url}" alt="${articles[i].images[0].caption}">
   `
