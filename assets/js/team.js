@@ -2,10 +2,20 @@
 // key for Google maps
 const apiKey = 'AIzaSyCbOrVjet_s1nbRMEgLVNsx0reP9G6Ju6g';
 
+//for navbar search
 let searchVal = localStorage.getItem('search') || '';
 
 let latit = JSON.parse(localStorage.getItem('lat'));
 let long = JSON.parse(localStorage.getItem('lon'));
+
+//render when redirected
+let search = localStorage.getItem('search')
+
+
+
+// capitalize first letters of team names for AJAX request
+let capSearch = toUpper(search);
+
 
 function initMap() {
 }
@@ -70,14 +80,7 @@ function searchTeam(str) {
     .catch(e => console.error(e));
 }
 
-
-//render when redirected
-let search = localStorage.getItem('search')
 searchTeam(search);
-
-
-// capitalize first letters of team names for AJAX request
-let capSearch = toUpper(search);
 
 //render roster on load
 fetch(url, {
