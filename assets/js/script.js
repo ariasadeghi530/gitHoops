@@ -2,9 +2,29 @@
 let searchVal = localStorage.getItem('search') || '';
 
 
+//espn api for nba related articles
+fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news`)
+  .then(r => r.json())
+  .then(({ articles }) => {
+
+    //populate carousel with news
+    for (let i = 0; i < 6; i++) {
+
+      document.getElementById(`carouselImg${i}`).innerHTML = `
+  <img style="width: 100%; height: 275px;" src="${articles[i].images[0].url}" alt="${articles[i].images[0].caption}">
+  `
+      document.getElementById(`carouselContent${i}`).innerHTML = `
+  <h4>${articles[i].headline}</h4>
+  <p>${articles[i].description}</p>
+  `
+    }
+  })
+  .catch(e => console.error(e));
+
+
 //search bar redirect
 document.getElementById('searchBtn').addEventListener("click", event => {
-
+  event.preventDefault()
   searchVal = document.getElementById("searchBar").value.toLowerCase();
   localStorage.setItem('search', searchVal);
 
@@ -28,6 +48,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
   document.getElementById('searchBar').value = '';
 })
 
+
 //for mobile navbar drop
 document.addEventListener('DOMContentLoaded', function () {
   let elems = document.querySelectorAll('.sidenav');
@@ -39,33 +60,3 @@ document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems, {});
 });
-
-
-
-
-
-//News api articles
-fetch(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=f7435c3676b34c89bdb1562b6cac0849`)
-  .then(r => r.json())
-  .then(({ articles }) => {
-  })
-
-//espn api for nba related articles
-fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news`)
-  .then(r => r.json())
-  .then(({ articles }) => {
-    console.log(articles);
-    for (let i = 0; i < 6; i++) {
-      
-      document.getElementById(`carouselImg${i}`).innerHTML = `
-  <img style="width: 100%; height: 275px;" src="${articles[i].images[0].url}" alt="${articles[i].images[0].caption}">
-  `
-      document.getElementById(`carouselContent${i}`).innerHTML = `
-  <h4>${articles[i].headline}</h4>
-  <p>${articles[i].description}</p>
-  `
-    }
-  })
-  .catch(e => console.error(e));
-
-
