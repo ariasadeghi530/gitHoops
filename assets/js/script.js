@@ -42,7 +42,7 @@ document.getElementById('searchBtn').addEventListener("click", event => {
     localStorage.setItem('player', splitName);
 
     window.location.replace('./player.html')
-  } else {
+  } else if (nbaTeamNames.includes(searchVal)) {
 
     // if team name doesn't include city, go back to previous index with city
     if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
