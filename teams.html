@@ -21,22 +21,6 @@
         <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
             alt="brand-logo" id="navbarLogo"></a>
 
-        <!-- for search mobile (button) -->
-        <ul class="right">
-          <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
-            <i class="material-icons" id="searchIcon">search</i>
-          </a>
-        </ul>
-
-        <!-- search bar  -->
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <div class="input-field" id="searchText">
-              <input type="text" id="searchBar">
-              <label class="label-icon white-text" for="text"></label>
-            </div>
-          </li>
-        </ul>
         <!-- menu for moblie  -->
         <a href="#" class="sidenav-trigger" data-target="mobile-nav">
           <i class="material-icons" id="mobileIcons">menu</i>
@@ -45,11 +29,24 @@
         <ul class="right hide-on-med-and-down" id="menu">
           <li><a href="./games.html">Games</a></li>
           <li><a href="./teams.html">Teams</a></li>
-          <!-- <li><a href="player.html">Player</a></li> -->
         </ul>
       </div>
     </div>
+    <!-- search bar (mobile)  -->
+    <ul class="right">
+      <li>
+        <form>
+          <div class="input-field">
+            <input id="searchBar" class="left-align" type="search" required>
+            <label class="label-icon" for="search"></label>
+          </div>
+        </form>
+      </li>
+      <li><a class="btn-sm light-blue darken-4" data-target="searchBar" id="searchBtn"><i
+            class="material-icons">search</i></a></li>
+    </ul>
   </nav>
+
 
   <!-- for mobile dropdown -->
   <ul class="sidenav" id="mobile-nav">
@@ -57,13 +54,12 @@
     <li><a href="./teams.html">Teams</a></li>
   </ul>
 
+  <!-- list teams -->
   <div class="container">
     <div class="row center" id="teamList">
 
     </div>
   </div>
-
-
 
 
   <!-- Footer -->

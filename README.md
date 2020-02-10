@@ -10,4 +10,11 @@
 - The navbar contains links to the games page, as well as teams page
 - The games page lets you see the 15 most recent and upcoming games in the NBA
 - The teams page lists all the NBA teams, and you can click on them to see their team page
-- The individual team page shows more info for that individual team, as well as a map with the location of the stadium
+- The individual team page shows more info for that individual team, a map with the location of the stadium, as well as a current team roster
+- Clicking on an individual player navigates to the individual team page, with more information on the player
+
+## API's we used
+- theSportsDB 
+- mySportsFeed
+- Google Maps
+- ESPN News

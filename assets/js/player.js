@@ -1,32 +1,11 @@
 
-
-//search bar redirect
+// get search value from local storage
 let searchVal = localStorage.getItem('search') || '';
 
-document.getElementById('searchBtn').addEventListener("click", event => {
-  searchVal = document.getElementById("searchBar").value.toLowerCase();
-  localStorage.setItem('search', searchVal);
+//get value from redirect
+let search = (localStorage.getItem('search')).split(" ");
 
-
-  if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
-
-    //split name for ajax request
-    let splitName = searchVal.split(" ");
-    searchPlayer(splitName[0], splitName[1]);
-
-  } else {
-
-    // if team name doesn't include city, go back to previous index with city
-    if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
-      searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)]
-      localStorage.setItem('search', searchVal);
-    }
-    window.location.replace('./team.html');
-  }
-  document.getElementById('searchBar').value = '';
-})
-
-
+//render player page 
 function searchPlayer(strFirst, strLast) {
   fetch('https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=' + strFirst + '%20' + strLast)
     .then(r => r.json())
@@ -60,10 +39,41 @@ function searchPlayer(strFirst, strLast) {
     .catch(e => console.error(e));
 }
 
-
-let search = (localStorage.getItem('search')).split(" ");
-console.log(search);
+// to render players on redirect
 searchPlayer(search[0], search[1]);
+
+//search bar redirect
+document.getElementById('searchBtn').addEventListener("click", event => {
+  event.preventDefault();
+  searchVal = document.getElementById("searchBar").value.toLowerCase();
+
+  //check if anything has been typed
+  if ((searchVal === '')) {
+    document.getElementById('searchBar').focus();
+  }
+  else {
+    localStorage.setItem('search', searchVal);
+
+    //change page to player page if name is in array of players
+    if (!(nbaTeamNames.includes(searchVal)) && (currentPlayers.includes(searchVal))) {
+      //split name for ajax request
+      let splitName = searchVal.split(" ");
+
+      localStorage.setItem('player', splitName);
+
+      window.location.replace('./player.html')
+    } else if (nbaTeamNames.includes(searchVal)) {
+
+      // if team name doesn't include city, go back to previous index with city
+      if (!((nbaTeamNames.indexOf(searchVal)) % 2 === 0)) {
+        searchVal = nbaTeamNames[(nbaTeamNames.indexOf(searchVal) - 1)];
+        localStorage.setItem('search', searchVal);
+      }
+      window.location.replace('./team.html');
+    }
+    document.getElementById('searchBar').value = '';
+  }
+});
 
 //for mobile navbar drop
 document.addEventListener('DOMContentLoaded', function () {

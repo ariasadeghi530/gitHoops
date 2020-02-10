@@ -21,23 +21,6 @@
         <a href="./index.html" class="brand-logo"><img class="brand-logo" src="./assets/images/updateLogo.png"
             alt="brand-logo" id="navbarLogo"></a>
 
-        <!-- for search mobile (button) -->
-        <ul class="right">
-          <a href="#" class="search-trigger btn-flat light-blue darken-4" data-target="searchBar" id="searchBtn">
-            <i class="material-icons" id="searchIcon">search</i>
-          </a>
-        </ul>
-
-        <!-- search bar  -->
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <div class="input-field" id="searchText">
-              <input type="text" id="searchBar">
-              <label class="label-icon white-text" for="text"></label>
-            </div>
-          </li>
-        </ul>
-      
         <!-- menu for moblie  -->
         <a href="#" class="sidenav-trigger" data-target="mobile-nav">
           <i class="material-icons" id="mobileIcons">menu</i>
@@ -46,10 +29,21 @@
         <ul class="right hide-on-med-and-down" id="menu">
           <li><a href="./games.html">Games</a></li>
           <li><a href="./teams.html">Teams</a></li>
-          <!-- <li><a href="player.html">Player</a></li> -->
         </ul>
       </div>
     </div>
+    <!-- search bar (mobile)  -->
+    <ul class="right">
+      <li>
+        <form>
+          <div class="input-field">
+            <input id="searchBar" class="left-align" type="search" required>
+            <label class="label-icon" for="search"></label>
+          </div>
+        </form>
+      </li>
+      <li><a class="btn-sm light-blue darken-4" data-target="searchBar" id="searchBtn"><i class="material-icons">search</i></a></li>
+    </ul>
   </nav>
 
   <!-- for mobile dropdown -->
@@ -58,17 +52,17 @@
     <li><a href="./teams.html">Teams</a></li>
   </ul>
 
-    
-<div class="carousel carousel-slider center">
-  <div class="carousel-fixed-item center">
-  </div>
+  <!-- carousel items -->
+  <div class="carousel carousel-slider center" id="carouselContainer">
+    <div class="carousel-fixed-item center">
+    </div>
     <div class="carousel-item white black-text">
       <div class="row">
         <div class="col m1"></div>
         <div class="col m4" id="carouselImg0"></div>
         <div class="col m6" id="carouselContent0"></div>
         <div class="col m1"></div>
-      </div><!--row-->
+      </div>
     </div>
     <div class="carousel-item white black-text">
       <div class="row">
@@ -76,31 +70,46 @@
         <div class="col m4" id="carouselImg1"></div>
         <div class="col m6" id="carouselContent1"></div>
         <div class="col m1"></div>
-      </div><!--row-->
+      </div>
+    </div>
+    <div class="carousel-item white black-text">
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m4" id="carouselImg2"></div>
+        <div class="col m6" id="carouselContent2"></div>
+        <div class="col m1"></div>
+      </div>
+    </div>
+    <div class="carousel-item white black-text">
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m4" id="carouselImg3"></div>
+        <div class="col m6" id="carouselContent3"></div>
+        <div class="col m1"></div>
+      </div>
+    </div>
+    <div class="carousel-item white black-text">
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m4" id="carouselImg4"></div>
+        <div class="col m6" id="carouselContent4"></div>
+        <div class="col m1"></div>
+      </div>
+    </div>
+    <div class="carousel-item white black-text">
+      <div class="row">
+        <div class="col m1"></div>
+        <div class="col m4" id="carouselImg5"></div>
+        <div class="col m6" id="carouselContent5"></div>
+        <div class="col m1"></div>
+      </div>
+    </div>
   </div>
-  <div class="carousel-item white black-text">
-    <div class="row">
-      <div class="col m1"></div>
-      <div class="col m4" id="carouselImg2"></div>
-      <div class="col m6" id="carouselContent2"></div>
-      <div class="col m1"></div>
-    </div><!--row-->
-  </div>
-  <div class="carousel-item white black-text">
-    <div class="row">
-      <div class="col m1"></div>
-      <div class="col m4" id="carouselImg3"></div>
-      <div class="col m6" id="carouselContent3"></div>
-      <div class="col m1"></div>
-    </div><!--row-->
-  </div>
-</div>
 
-<br>
+  <br>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-  
   <div class="container">
     <div class="section">
 
@@ -113,7 +122,8 @@
             </a>
 
             <p class="light">
-              See all recent and upcoming games in the NBA, as well as what time they air. <br><a href="games.html">Learn More.</a>
+              See all recent and upcoming games in the NBA, as well as what time they air. <br><a
+                href="games.html">Learn More.</a>
             </p>
           </div>
         </div>
@@ -125,7 +135,8 @@
             </a>
 
             <p class="light">
-              Explore all the current teams in the league and click a logo to learn more about that team! You can also see where their stadium is located, and utilize Google maps to naviagate there!
+              Explore all the current teams in the league and click a logo to learn more about that team! You can also
+              see where their stadium is located, and utilize Google maps to naviagate there!
               <br>
               <a href="teams.html">Learn More.</a>
             </p>
@@ -151,6 +162,7 @@
       </div>
     </div>
   </footer>
+  
   <script src="./assets/js/nbaTeams.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./assets/js/nbaPlayers.js"></script>
