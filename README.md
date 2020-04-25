@@ -1,4 +1,4 @@
-# projectOne
+# GitHoops
 
 ## About this app
 - Use this app to see recent sports news, view recent NBA games, view teams in the NBA, search a team, and search a player!
